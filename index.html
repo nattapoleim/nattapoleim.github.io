@@ -26,8 +26,9 @@
   <body class="scroll-smooth">
     <!-- include Navbar -->
     <section hx-get="/components/navbar.html" hx-trigger="load"></section>
+    <!-- end navbar -->
 
-    <!-- HERO -->
+    <!-- hero -->
     <section class="container grid lg:grid-cols-2 xl:grid-cols-3 gap-8 *:rounded-xl *:h-[37rem]">
       <div class="hidden bg-[#E0E0E0] xl:flex items-end justify-center overflow-hidden">
         <img class="h-[80%]" src="/assets/hero/hero-l.png" alt="hero-img" />
@@ -58,8 +59,9 @@
       <img style="height: 2rem" src="/assets/sponslogo/calvin.svg" alt="calvin" />
       <img style="height: 2rem" src="/assets/sponslogo/denim.svg" alt="denim" />
     </section>
+    <!-- end hero -->
 
-    <!-- deal of the month carousel -->
+    <!-- deals -->
     <section class="bg-[#e7e7e7] py-20">
       <div class="container flex gap-2">
         <div class="*:text-dark w-1/3 space-y-5">
@@ -73,15 +75,12 @@
         <div class="bg-green-100 flex-1">img</div>
       </div>
     </section>
+    <!-- end deals -->
 
     <!-- include footer -->
     <section hx-get="/components/footer.html" hx-trigger="load"></section>
+    <!-- end footer -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        htmx.process(document.querySelector('head'))
-      })
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
