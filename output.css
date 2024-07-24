@@ -10521,6 +10521,10 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 640px) {
+  .sm\:grid {
+    display: grid;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -10562,4 +10566,20 @@ html:has(.drawer-open.drawer-open) {
       paint-order: markers;
     }
   }
+}
+
+.\[\&_\.image\]\:w-full .image {
+  width: 100%;
+}
+
+.\[\&_\.image\]\:rounded-xl .image {
+  border-radius: 0.75rem;
+}
+
+.\[\&_div\]\:h-\[37rem\] div {
+  height: 37rem;
+}
+
+.\[\&_div\]\:rounded-xl div {
+  border-radius: 0.75rem;
 }
