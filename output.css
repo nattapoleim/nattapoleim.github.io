@@ -8553,6 +8553,14 @@ html:has(.drawer-open.drawer-open) {
   height: 80%;
 }
 
+.h-\[40rem\] {
+  height: 40rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
 .min-h-full {
   min-height: 100%;
 }
@@ -8584,6 +8592,14 @@ html:has(.drawer-open.drawer-open) {
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
 }
 
 .flex-1 {
@@ -9132,6 +9148,10 @@ html:has(.drawer-open.drawer-open) {
   gap: 2rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -9611,6 +9631,20 @@ html:has(.drawer-open.drawer-open) {
   background-color: rgb(220 252 231 / var(--tw-bg-opacity));
 }
 
+.bg-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity));
+}
+
+.bg-green-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(134 239 172 / var(--tw-bg-opacity));
+}
+
+.bg-inherit {
+  background-color: inherit;
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -9877,6 +9911,11 @@ html:has(.drawer-open.drawer-open) {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
@@ -10183,6 +10222,48 @@ html:has(.drawer-open.drawer-open) {
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[10px_0_20px_\#000\] {
+  --tw-shadow: 10px 0 20px #000;
+  --tw-shadow-colored: 10px 0 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_50px_20px_\#000\] {
+  --tw-shadow: 0 50px 20px #000;
+  --tw-shadow-colored: 0 50px 20px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_50px_20px_50px_\#000\] {
+  --tw-shadow: 0 50px 20px 50px #000;
+  --tw-shadow-colored: 0 50px 20px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_50px_0_50px_\#000\] {
+  --tw-shadow: 0 50px 0 50px #000;
+  --tw-shadow-colored: 0 50px 0 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_50px_100px_50px_\#000\] {
+  --tw-shadow: 0 50px 100px 50px #000;
+  --tw-shadow-colored: 0 50px 100px 50px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-2xl {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -10521,8 +10602,16 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 640px) {
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:grid {
     display: grid;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:underline {
@@ -10538,9 +10627,17 @@ html:has(.drawer-open.drawer-open) {
   .md\:hidden {
     display: none;
   }
+
+  .md\:w-3\/4 {
+    width: 75%;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -10551,6 +10648,10 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 1280px) {
+  .xl\:block {
+    display: block;
+  }
+
   .xl\:flex {
     display: flex;
   }
@@ -10566,12 +10667,4 @@ html:has(.drawer-open.drawer-open) {
       paint-order: markers;
     }
   }
-}
-
-.\[\&_div\]\:h-\[37rem\] div {
-  height: 37rem;
-}
-
-.\[\&_div\]\:rounded-xl div {
-  border-radius: 0.75rem;
 }
