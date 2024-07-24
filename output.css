@@ -10568,14 +10568,6 @@ html:has(.drawer-open.drawer-open) {
   }
 }
 
-.\[\&_\.image\]\:w-full .image {
-  width: 100%;
-}
-
-.\[\&_\.image\]\:rounded-xl .image {
-  border-radius: 0.75rem;
-}
-
 .\[\&_div\]\:h-\[37rem\] div {
   height: 37rem;
 }
