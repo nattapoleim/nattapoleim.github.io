@@ -1,0 +1,16 @@
+{
+  "name": "nattapoleim.github.io",
+  "version": "1.0.0",
+  "description": "###### E-commerce Website",
+  "main": "script.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./input.css -o ./output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "daisyui": "^4.12.10",
+    "tailwindcss": "^3.4.6"
+  }
+}

@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang=en">
+<html lang="en">
   <head>
-    <title></title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://unpkg.com/htmx.org@2.0.1"
+      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+      crossorigin="anonymous"
+    ></script>
+    <!-- styles -->
+    <link rel="stylesheet" href="output.css" />
+    <title>FEBC - Midterm - Ecommerce Website</title>
   </head>
-  <body>
-    <h1>Hello Midterm</h1>
+  <body class="scroll-smooth">
+    <!-- Navbar -->
+    <section hx-get="/components/navbar.html" hx-trigger="load"></section>
+
+    <!-- HERO -->
+    <section class="container grid lg:grid-cols-2 xl:grid-cols-3 gap-8 *:rounded-xl *:h-[37rem]">
+      <div class="hidden bg-[#E0E0E0] xl:flex items-end justify-center overflow-hidden">
+        <img class="h-[80%]" src="/assets/hero/hero-l.png" alt="hero-img" />
+      </div>
+      <div class="flex flex-col items-center justify-between gap-8 *:rounded-xl *:w-full">
+        <div class="bg-[#E0E0E0] h-[12rem] overflow-hidden">
+          <img src="/assets/hero/hero-t.png" alt="hero-img" />
+        </div>
+        <div class="h-4/6 flex flex-col items-center justify-between *:leading-[1]">
+          <p class="text-7xl font-semibold tracking-widest text-dark">ULTIMATE</p>
+          <p class="text-[10rem] font-bold text-dark">SALE</p>
+          <p class="tracking-wider text-dark">NEW COLLECTION</p>
+          <a href="#" class="btn py-3 px-10 mt-3">SHOP NOW</a>
+        </div>
+        <div class="bg-[#E0E0E0] h-[12rem] overflow-hidden">
+          <img src="/assets/hero/hero-b.png" alt="hero-img" />
+        </div>
+      </div>
+      <div class="hidden bg-[#E0E0E0] lg:flex items-end justify-center">
+        <img class="h-[80%]" src="/assets/hero/hero-r.png" alt="hero-img" />
+      </div>
+    </section>
+
+    <!-- footer -->
+    <section hx-get="/components/footer.html" hx-trigger="load"></section>
+
+    <!-- GSAP CDN -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
   </body>
 </html>
