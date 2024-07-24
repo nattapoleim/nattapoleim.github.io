@@ -7,7 +7,7 @@
 ### Requirement for E-commerce
 
 - [ ] Homepage
-  - [ ] Navbar
+  - [x] Navbar
   - [ ] Best seller "Carousel"
   - [ ] Promotion
 - [ ] Product page

@@ -9,7 +9,7 @@
 
   html,
   body {
-    @apply bg-bg min-h-screen;
+    @apply bg-bg;
   }
 }
 
