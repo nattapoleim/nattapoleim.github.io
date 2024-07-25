@@ -68,7 +68,7 @@
     <!-- end hero -->
 
     <!-- deals -->
-    <section class="bg-base-200/40 py-10 my-10">
+    <section class="bg-gradient-to-b from-base-200/20 via-white to-base-200/20 py-10 my-10">
       <div class="container flex flex-col items-center justify-center sm:flex-row gap-5">
         <div
           class="text-secondary text-center sm:text-start sm:w-1/2 flex justify-center flex-col items-center sm:items-start gap-5 lg:gap-10"
@@ -80,10 +80,73 @@
           </p>
           <button class="btn btn-primary px-16">Buy Now</button>
         </div>
+
+        <!-- carousel -->
         <div hx-get="/components/hero/carousel.html" hx-trigger="load" class="sm:w-1/2">img</div>
+        <!-- end carousel -->
       </div>
     </section>
     <!-- end deals -->
+
+    <!-- benefit -->
+    <section
+      class="container my-20 text-secondary grid sm:grid-cols-2 lg:flex items-center justify-center sm:justify-between gap-10"
+    >
+      <div class="flex items-center justify-center lg:justify-center sm:justify-start w-full gap-2">
+        <img class="size-12" src="/assets/benefit/quality.svg" alt="quality" />
+        <div>
+          <h6 class="font-medium">High Quality</h6>
+          <p class="text-sm">crafted from top materials</p>
+        </div>
+      </div>
+      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
+        <img class="size-12" src="/assets/benefit/warranty.svg" alt="quality" />
+        <div>
+          <h6 class="font-medium">Warranty Protection</h6>
+          <p class="text-sm">Over 2 years</p>
+        </div>
+      </div>
+      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
+        <img class="size-12" src="/assets/benefit/shipping.svg" alt="quality" />
+        <div>
+          <h6 class="font-medium">Free Shipping</h6>
+          <p class="text-sm">Order over 150 $</p>
+        </div>
+      </div>
+      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
+        <img class="size-12" src="/assets/benefit/suppport.svg" alt="quality" />
+        <div>
+          <h6 class="font-medium">24 / 7 Support</h6>
+          <p class="text-sm">Dedicated support</p>
+        </div>
+      </div>
+    </section>
+    <!-- end benefit -->
+
+    <!-- instagram -->
+    <section
+      class="bg-gradient-to-b from-base-200/20 to-white mb-20 py-20 flex flex-col items-center justify-center gap-20"
+    >
+      <div
+        class="flex flex-col items-center justify-center gap-10 sm:w-[70%] lg:w-[43%] text-center text-secondary"
+      >
+        <h4 class="text-2xl sm:text-4xl font-volk">Follow Us On Instagram</h4>
+        <p class="text-sm sm:text-[1rem]">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices
+          sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
+        </p>
+      </div>
+      <div class="grid grid-cols-3 md:grid-cols-7 items-center justify-center">
+        <img class="" src="/assets/products/product12.png" alt="instagram" />
+        <img class="" src="/assets/products/product13.png" alt="instagram" />
+        <img class="" src="/assets/products/product14.png" alt="instagram" />
+        <img class="" src="/assets/products/product15.png" alt="instagram" />
+        <img class="" src="/assets/products/product16.png" alt="instagram" />
+        <img class="" src="/assets/products/product17.png" alt="instagram" />
+        <img class="hidden md:block" src="/assets/products/product18.png" alt="instagram" />
+      </div>
+    </section>
+    <!-- end instagram -->
 
     <!-- include footer -->
     <section hx-get="/components/footer.html" hx-trigger="load"></section>

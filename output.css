@@ -8307,6 +8307,11 @@ html:has(.drawer-open.drawer-open) {
   margin-bottom: 2.5rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -8317,6 +8322,10 @@ html:has(.drawer-open.drawer-open) {
 
 .mt-3 {
   margin-top: 0.75rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .box-border {
@@ -8418,6 +8427,11 @@ html:has(.drawer-open.drawer-open) {
   display: none;
 }
 
+.size-12 {
+  width: 3rem;
+  height: 3rem;
+}
+
 .h-4\/6 {
   height: 66.666667%;
 }
@@ -8438,12 +8452,12 @@ html:has(.drawer-open.drawer-open) {
   height: 100%;
 }
 
-.min-h-full {
-  min-height: 100%;
+.h-1\/2 {
+  height: 50%;
 }
 
-.w-1\/2 {
-  width: 50%;
+.min-h-full {
+  min-height: 100%;
 }
 
 .w-3\/4 {
@@ -8475,16 +8489,40 @@ html:has(.drawer-open.drawer-open) {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-\[45\%\] {
+  width: 45%;
+}
+
+.w-\[43\%\] {
+  width: 43%;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-\[70\%\] {
+  width: 70%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
 
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
 .shrink {
   flex-shrink: 1;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
 }
 
 .flex-grow {
@@ -8493,6 +8531,10 @@ html:has(.drawer-open.drawer-open) {
 
 .grow {
   flex-grow: 1;
+}
+
+.grow-0 {
+  flex-grow: 0;
 }
 
 .table-auto {
@@ -8817,6 +8859,14 @@ html:has(.drawer-open.drawer-open) {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -9023,6 +9073,10 @@ html:has(.drawer-open.drawer-open) {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-20 {
+  gap: 5rem;
 }
 
 .space-x-10 > :not([hidden]) ~ :not([hidden]) {
@@ -9489,16 +9543,59 @@ html:has(.drawer-open.drawer-open) {
   background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
 }
 
-.bg-base-200\/20 {
-  background-color: var(--fallback-b2,oklch(var(--b2)/0.2));
+.bg-base-200\/40 {
+  background-color: var(--fallback-b2,oklch(var(--b2)/0.4));
 }
 
 .bg-inherit {
   background-color: inherit;
 }
 
-.bg-base-200\/40 {
-  background-color: var(--fallback-b2,oklch(var(--b2)/0.4));
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-base-200 {
+  --tw-gradient-from: var(--fallback-b2,oklch(var(--b2)/1)) var(--tw-gradient-from-position);
+  --tw-gradient-to: var(--fallback-b2,oklch(var(--b2)/0)) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-base-200\/40 {
+  --tw-gradient-from: var(--fallback-b2,oklch(var(--b2)/0.4)) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-base-200\/20 {
+  --tw-gradient-from: var(--fallback-b2,oklch(var(--b2)/0.2)) var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-white {
+  --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-inherit {
+  --tw-gradient-to: inherit var(--tw-gradient-to-position);
+}
+
+.to-base-200\/40 {
+  --tw-gradient-to: var(--fallback-b2,oklch(var(--b2)/0.4)) var(--tw-gradient-to-position);
+}
+
+.to-base-200 {
+  --tw-gradient-to: var(--fallback-b2,oklch(var(--b2)/1)) var(--tw-gradient-to-position);
+}
+
+.to-base-200\/20 {
+  --tw-gradient-to: var(--fallback-b2,oklch(var(--b2)/0.2)) var(--tw-gradient-to-position);
+}
+
+.to-white {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
 }
 
 .decoration-slice {
@@ -9645,6 +9742,11 @@ html:has(.drawer-open.drawer-open) {
   padding-bottom: 2.5rem;
 }
 
+.py-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -9761,6 +9863,10 @@ html:has(.drawer-open.drawer-open) {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-semibold {
@@ -10398,12 +10504,20 @@ html:has(.drawer-open.drawer-open) {
     display: grid;
   }
 
+  .sm\:w-1\/2 {
+    width: 50%;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
 
-  .sm\:w-1\/2 {
-    width: 50%;
+  .sm\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .sm\:flex-row {
@@ -10414,8 +10528,25 @@ html:has(.drawer-open.drawer-open) {
     align-items: flex-start;
   }
 
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
   .sm\:text-start {
     text-align: start;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .sm\:text-\[1rem\] {
+    font-size: 1rem;
   }
 
   .sm\:underline {
@@ -10424,6 +10555,10 @@ html:has(.drawer-open.drawer-open) {
 }
 
 @media (min-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -10436,9 +10571,12 @@ html:has(.drawer-open.drawer-open) {
     width: 75%;
   }
 
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .md\:w-\[70\%\] {
+    width: 70%;
+  }
+
+  .md\:grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
   }
 }
 
@@ -10451,22 +10589,20 @@ html:has(.drawer-open.drawer-open) {
     width: 75%;
   }
 
+  .lg\:w-\[43\%\] {
+    width: 43%;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:gap-10 {
     gap: 2.5rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .lg\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
   }
 
   .lg\:text-\[1rem\] {
@@ -10496,6 +10632,14 @@ html:has(.drawer-open.drawer-open) {
   }
 }
 
+.\[\&_\*\]\:h-1\/2 * {
+  height: 50%;
+}
+
+.\[\&_\>_\*\]\:h-1\/2 > * {
+  height: 50%;
+}
+
 .\[\&_\>_\*\]\:leading-\[1\] > * {
   line-height: 1;
 }
@@ -10514,4 +10658,12 @@ html:has(.drawer-open.drawer-open) {
 
 .\[\&_\>_div\]\:rounded-xl > div {
   border-radius: 0.75rem;
+}
+
+.\[\&_img\]\:h-1\/2 img {
+  height: 50%;
+}
+
+.\[\&_img\]\:shrink-0 img {
+  flex-shrink: 0;
 }

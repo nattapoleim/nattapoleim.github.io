@@ -6,10 +6,10 @@
 
 ### Requirement for E-commerce
 
-- [ ] Homepage
+- [x] Homepage
   - [x] Navbar
-  - [ ] Best seller "Carousel"
-  - [ ] Promotion
+  - [x] Best seller "Carousel"
+  - [x] Promotion
 - [ ] Product page
   - [ ] All products
   - [ ] product img detail
