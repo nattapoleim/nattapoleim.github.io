@@ -2,11 +2,7 @@
 module.exports = {
   content: ['./**/*.{html,js}'],
   theme: {
-    extend: {
-      colors: {
-        bg: '#E0E0E0',
-      },
-    },
+    extend: {},
     container: {
       center: true,
       padding: {
@@ -44,6 +40,7 @@ module.exports = {
           'warning-content': '#161002',
           error: '#ff6978',
           'error-content': '#160405',
+          bg: '#E0E0E0',
         },
       },
     ],
