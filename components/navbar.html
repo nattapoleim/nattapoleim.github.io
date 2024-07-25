@@ -1,4 +1,4 @@
-<nav class="navbar container py-10 flex items-center justify-between text-sm">
+<nav class="navbar container py-10 flex items-center justify-between text-sm text-primary">
   <!-- TODO: change path -->
   <a class="logo font-volk text-4xl" href="#">FASCO</a>
   <div class="hidden md:flex items-center gap-5">
@@ -19,25 +19,23 @@
       <span class="link-span">About Us</span>
     </a>
     <!-- TODO: change path -->
-    <a class="btn px-3" href="#"><img class="" src="/assets/cart.svg" alt="cart" /></a>
+    <a class="btn btn-primary" href="#"><img class="" src="/assets/cart.svg" alt="cart" /></a>
   </div>
 
   <!-- mobile menu -->
   <div class="drawer drawer-end w-fit md:hidden flex items-center gap-2">
-    <a class="py-2 duration-200 rounded-md btn-ghost px-3" href="#"
-      ><img src="/assets/cart-black.svg" alt="cart"
-    /></a>
+    <a class="btn btn-ghost" href="#"><img src="/assets/cart-black.svg" alt="cart" /></a>
     <input id="my-drawer" type="checkbox" class="drawer-toggle" />
     <div class="drawer-content">
       <!-- Page content here -->
-      <label for="my-drawer" class="btn">
+      <label for="my-drawer" class="btn btn-ghost">
         <img src="/assets/menu.svg" alt="menu-icon" />
       </label>
     </div>
     <div class="drawer-side">
       <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
       <div
-        class="menu bg-light text-base-content min-h-full w-80 p-4 flex flex-col items-center gap-10"
+        class="menu bg-base-100 text-base-content min-h-full w-80 p-4 flex flex-col items-center gap-10"
       >
         <!-- Sidebar content here -->
         <p class="text-3xl font-volk mt-10">MENU</p>

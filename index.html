@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="mytheme" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,56 +23,62 @@
     <!-- css styles -->
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="scroll-smooth">
+  <body>
     <!-- include Navbar -->
     <section hx-get="/components/navbar.html" hx-trigger="load"></section>
     <!-- end navbar -->
 
     <!-- hero -->
-    <section class="container sm:grid lg:grid-cols-2 xl:grid-cols-3 gap-8 *:rounded-xl *:h-[37rem]">
-      <div class="hidden bg-[#E0E0E0] xl:flex items-end justify-center overflow-hidden">
+    <section
+      class="container sm:grid lg:grid-cols-2 xl:grid-cols-3 gap-8 *:rounded-xl [&_>_div]:h-[37rem]"
+    >
+      <div class="hidden bg-bg xl:flex items-end justify-center overflow-hidden">
         <img class="h-[80%]" src="/assets/hero/hero-l.png" alt="hero-img" />
       </div>
-      <div class="flex flex-col items-center justify-between gap-8 *:rounded-xl *:w-full">
-        <div class="bg-[#E0E0E0] h-[12rem] overflow-hidden">
+      <div
+        class="flex flex-col items-center justify-between gap-8 [&_>_div]:rounded-xl [&_>_div]:w-full"
+      >
+        <div class="bg-bg h-[12rem] overflow-hidden">
           <img src="/assets/hero/hero-t.png" alt="hero-img" />
         </div>
-        <div class="h-4/6 flex flex-col items-center justify-between *:leading-[1]">
-          <p class="text-7xl font-semibold tracking-widest text-dark">ULTIMATE</p>
-          <p class="text-[10rem] font-bold text-dark">SALE</p>
-          <p class="tracking-wider text-dark">NEW COLLECTION</p>
+        <div
+          class="h-4/6 flex flex-col items-center justify-between [&_>_*]:leading-[1] text-primary"
+        >
+          <p class="text-7xl font-semibold tracking-widest">ULTIMATE</p>
+          <p class="text-[10rem] font-bold tracking-wider">SALE</p>
+          <p class="tracking-wider">NEW COLLECTION</p>
           <!-- TODO: change path -->
-          <a href="#" class="btn py-3 px-10 mt-3">SHOP NOW</a>
+          <a href="#" class="btn btn-primary px-10 mt-3">SHOP NOW</a>
         </div>
-        <div class="bg-[#E0E0E0] h-[12rem] overflow-hidden">
+        <div class="h-[12rem] overflow-hidden">
           <img src="/assets/hero/hero-b.png" alt="hero-img" />
         </div>
       </div>
-      <div class="hidden bg-[#E0E0E0] lg:flex items-end justify-center">
+      <div class="hidden bg-bg lg:flex items-end justify-center">
         <img class="h-[80%]" src="/assets/hero/hero-r.png" alt="hero-img" />
       </div>
     </section>
     <section class="container flex flex-wrap items-center justify-center gap-10 my-10">
-      <img style="height: 2rem" src="/assets/sponslogo/chanel.svg" alt="chanel" />
-      <img style="height: 2rem" src="/assets/sponslogo/louis.svg" alt="louis" />
-      <img style="height: 2rem" src="/assets/sponslogo/prada.svg" alt="prada" />
-      <img style="height: 2rem" src="/assets/sponslogo/calvin.svg" alt="calvin" />
-      <img style="height: 2rem" src="/assets/sponslogo/denim.svg" alt="denim" />
+      <img src="/assets/sponslogo/chanel.svg" alt="chanel" />
+      <img src="/assets/sponslogo/louis.svg" alt="louis" />
+      <img src="/assets/sponslogo/prada.svg" alt="prada" />
+      <img src="/assets/sponslogo/calvin.svg" alt="calvin" />
+      <img src="/assets/sponslogo/denim.svg" alt="denim" />
     </section>
     <!-- end hero -->
 
     <!-- deals -->
-    <section class="bg-[#e7e7e7] py-20">
+    <section class="bg-base-200/20 py-20 my-10">
       <div class="container flex gap-2">
-        <div class="*:text-dark w-1/3 space-y-5">
+        <div class="text-secondary w-1/3 space-y-5">
           <h3 class="font-volk text-3xl">Deals Of The Month</h3>
           <p class="text-sm w-3/4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur recusandae illo ipsa
             dicta quidem corporis at sequi hic!
           </p>
-          <button class="btn !text-white">Buy Now</button>
+          <button class="btn btn-primary px-16">Buy Now</button>
         </div>
-        <div class="bg-green-100 flex-1">img</div>
+        <div hx-get="/components/hero/carousel.html" hx-trigger="load" class="flex-1">img</div>
       </div>
     </section>
     <!-- end deals -->

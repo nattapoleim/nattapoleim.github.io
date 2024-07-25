@@ -4,32 +4,32 @@
 
 @layer base {
   * {
-    @apply text-black font-poppins font-light;
+    @apply font-poppins font-light;
   }
 
   html,
   body {
-    @apply bg-bg;
+    @apply bg-base-100;
   }
 }
 
 @layer components {
-  .btn {
+  /* .btn {
     @apply bg-black font-poppins font-light text-white py-2 px-6 rounded-lg w-fit shadow-xl hover:bg-dark duration-200 text-sm;
+  } */
+
+  .btn {
+    @apply font-light;
   }
+
   .links {
-    @apply before:hover:-inset-1 before:block before:absolute before:-skew-y-3 before:bg-black relative before:duration-300;
+    @apply before:hover:-inset-1 before:block before:absolute before:-skew-y-3 before:bg-primary relative before:duration-300;
   }
+
   .link-span {
-    @apply relative group-hover:text-white duration-200 px-3;
+    @apply relative group-hover:text-primary-content duration-200 px-3;
   }
 }
-
-/* @layer utilities {
-  .container {
-    @apply max-w-7xl mx-auto;
-  }
-} */
 
 * {
   margin: 0;
