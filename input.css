@@ -4,27 +4,16 @@
 
 @layer base {
   * {
-    @apply font-poppins font-light;
+    @apply font-courier font-light;
   }
 
   html,
   body {
-    @apply bg-base-100;
+    @apply bg-white;
   }
 }
 
 @layer components {
-  .btn {
-    @apply font-light shadow-xl;
-  }
-
-  .links {
-    @apply before:hover:-inset-1 before:block before:absolute before:-skew-y-3 before:bg-primary relative before:duration-300;
-  }
-
-  .link-span {
-    @apply relative group-hover:text-primary-content duration-200 px-3;
-  }
 }
 
 * {

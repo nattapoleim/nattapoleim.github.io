@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -24,134 +24,47 @@
     <link rel="stylesheet" href="output.css" />
   </head>
   <body>
-    <!-- include Navbar -->
-    <section hx-get="/components/navbar.html" hx-trigger="load"></section>
-    <!-- end navbar -->
-
-    <!-- hero -->
+    <!-- Navbar -->
     <section
-      class="container sm:grid lg:grid-cols-2 xl:grid-cols-3 gap-8 *:rounded-xl [&_>_div]:h-[37rem]"
+      class="mx-10 border px-10 mt-5 rounded-full h-16 flex items-center justify-between text-textGreen"
     >
-      <div class="hidden bg-bg xl:flex items-end justify-center overflow-hidden">
-        <img class="h-[80%]" src="/assets/hero/hero-l.png" alt="hero-img" />
-      </div>
-      <div
-        class="flex flex-col items-center justify-between gap-8 [&_>_div]:rounded-xl [&_>_div]:w-full"
-      >
-        <div class="bg-bg h-[12rem] overflow-hidden">
-          <img src="/assets/hero/hero-t.png" alt="hero-img" />
-        </div>
-        <div
-          class="h-4/6 flex flex-col items-center justify-between [&_>_*]:leading-[1] text-primary"
-        >
-          <p class="text-7xl font-semibold tracking-widest">ULTIMATE</p>
-          <p class="text-[10rem] font-bold tracking-wider">SALE</p>
-          <p class="tracking-wider">NEW COLLECTION</p>
-          <!-- TODO: change path -->
-          <a href="#" class="btn btn-primary px-10 mt-3">SHOP NOW</a>
-        </div>
-        <div class="h-[12rem] overflow-hidden">
-          <img src="/assets/hero/hero-b.png" alt="hero-img" />
-        </div>
-      </div>
-      <div class="hidden bg-bg lg:flex items-end justify-center">
-        <img class="h-[80%]" src="/assets/hero/hero-r.png" alt="hero-img" />
-      </div>
-    </section>
-    <section class="container flex flex-wrap items-center justify-center gap-10 my-10">
-      <img src="/assets/sponslogo/chanel.svg" alt="chanel" />
-      <img src="/assets/sponslogo/louis.svg" alt="louis" />
-      <img src="/assets/sponslogo/prada.svg" alt="prada" />
-      <img src="/assets/sponslogo/calvin.svg" alt="calvin" />
-      <img src="/assets/sponslogo/denim.svg" alt="denim" />
-    </section>
-    <!-- end hero -->
+      <a class="font-medium text-lg" href="#">SHOP</a>
+      <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
 
-    <!-- deals -->
-    <section class="bg-gradient-to-b from-base-200/20 via-white to-base-200/20 py-10 my-10">
-      <div class="container flex flex-col items-center justify-center sm:flex-row gap-5">
-        <div
-          class="text-secondary text-center sm:text-start sm:w-1/2 flex justify-center flex-col items-center sm:items-start gap-5 lg:gap-10"
-        >
-          <h3 class="font-volk text-5xl">Deals Of The Month</h3>
-          <p class="text-sm lg:text-[1rem] lg:w-3/4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur recusandae illo ipsa
-            dicta quidem corporis at sequi hic!
-          </p>
-          <button class="btn btn-primary px-16">Buy Now</button>
+      <!-- drawer -->
+      <div class="drawer drawer-end w-fit flex items-center">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <!-- Page content here -->
+          <label
+            for="my-drawer"
+            class="cursor-pointer"
+            hx-get="/assets/shopbag.svg"
+            hx-trigger="load"
+            hx-swap="innerHTML"
+          ></label>
         </div>
+        <div class="drawer-side">
+          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+          <div
+            class="menu bg-[#efefef] text-base-content min-h-full w-[25rem] flex flex-col items-center gap-5 p-0"
+          >
+            <!-- Sidebar content here -->
 
-        <!-- carousel -->
-        <div hx-get="/components/hero/carousel.html" hx-trigger="load" class="sm:w-1/2">img</div>
-        <!-- end carousel -->
-      </div>
-    </section>
-    <!-- end deals -->
-
-    <!-- benefit -->
-    <section
-      class="container my-20 text-secondary grid sm:grid-cols-2 lg:flex items-center justify-center sm:justify-between gap-10"
-    >
-      <div class="flex items-center justify-center lg:justify-center sm:justify-start w-full gap-2">
-        <img class="size-12" src="/assets/benefit/quality.svg" alt="quality" />
-        <div>
-          <h6 class="font-medium">High Quality</h6>
-          <p class="text-sm">crafted from top materials</p>
-        </div>
-      </div>
-      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
-        <img class="size-12" src="/assets/benefit/warranty.svg" alt="quality" />
-        <div>
-          <h6 class="font-medium">Warranty Protection</h6>
-          <p class="text-sm">Over 2 years</p>
-        </div>
-      </div>
-      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
-        <img class="size-12" src="/assets/benefit/shipping.svg" alt="quality" />
-        <div>
-          <h6 class="font-medium">Free Shipping</h6>
-          <p class="text-sm">Order over 150 $</p>
-        </div>
-      </div>
-      <div class="flex items-center lg:justify-center sm:justify-start w-full gap-2">
-        <img class="size-12" src="/assets/benefit/suppport.svg" alt="quality" />
-        <div>
-          <h6 class="font-medium">24 / 7 Support</h6>
-          <p class="text-sm">Dedicated support</p>
+            <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
+              <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
+              <span>1</span>
+            </div>
+            <div class="text-sm text-secondary font-semibold divide-y-4 divide-secondary">
+              Congrats, you've earned FREE SHIPPING!
+            </div>
+            <div class="w-full h-2 bg-secondary" />
+          </div>
         </div>
       </div>
     </section>
-    <!-- end benefit -->
 
-    <!-- instagram -->
-    <section
-      class="bg-gradient-to-b from-base-200/20 to-white mb-20 py-20 flex flex-col items-center justify-center gap-20"
-    >
-      <div
-        class="flex flex-col items-center justify-center gap-10 sm:w-[70%] lg:w-[43%] text-center text-secondary"
-      >
-        <h4 class="text-2xl sm:text-4xl font-volk">Follow Us On Instagram</h4>
-        <p class="text-sm sm:text-[1rem]">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque duis ultrices
-          sollicitudin aliquam sem. Scelerisque duis ultrices sollicitudin
-        </p>
-      </div>
-      <div class="grid grid-cols-3 md:grid-cols-7 items-center justify-center">
-        <img class="" src="/assets/products/product12.png" alt="instagram" />
-        <img class="" src="/assets/products/product13.png" alt="instagram" />
-        <img class="" src="/assets/products/product14.png" alt="instagram" />
-        <img class="" src="/assets/products/product15.png" alt="instagram" />
-        <img class="" src="/assets/products/product16.png" alt="instagram" />
-        <img class="" src="/assets/products/product17.png" alt="instagram" />
-        <img class="hidden md:block" src="/assets/products/product18.png" alt="instagram" />
-      </div>
-    </section>
-    <!-- end instagram -->
-
-    <!-- include footer -->
-    <section hx-get="/components/footer.html" hx-trigger="load"></section>
-    <!-- end footer -->
-
+    <!-- End Navbar -->
     <script src="script.js"></script>
   </body>
 </html>
