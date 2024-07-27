@@ -3,27 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply font-poppins font-light;
-  }
-
   html,
   body {
-    @apply bg-base-100;
+    @apply bg-white;
   }
 }
 
 @layer components {
   .btn {
-    @apply font-light shadow-xl;
+    @apply uppercase rounded-md hover:bg-primary-content hover:text-primary hover:border-primary-content;
   }
 
-  .links {
-    @apply before:hover:-inset-1 before:block before:absolute before:-skew-y-3 before:bg-primary relative before:duration-300;
+  .btn-md {
+    @apply py-3 px-5;
   }
 
-  .link-span {
-    @apply relative group-hover:text-primary-content duration-200 px-3;
+  .btn-lg {
+    @apply py-[1.25rem] px-8;
   }
 }
 

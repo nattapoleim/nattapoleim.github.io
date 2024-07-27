@@ -2,7 +2,11 @@
 module.exports = {
   content: ['./**/*.{html,js}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        textGreen: '#255653',
+      },
+    },
     container: {
       center: true,
       padding: {
@@ -11,8 +15,8 @@ module.exports = {
       },
     },
     fontFamily: {
-      poppins: ['Poppins', 'sans-serif'],
-      volk: ['Volkhov', 'serif'],
+      courier: ['Courier', 'space-mono'],
+      inter: ['Inter', 'serif'],
     },
   },
   plugins: [require('daisyui')],
@@ -20,10 +24,10 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: '#1f2937',
-          'primary-content': '#fff',
-          secondary: '#484848',
-          'secondary-content': '#d7d7d7',
+          primary: '#f0f55d',
+          'primary-content': '#075754',
+          secondary: '#4a9390',
+          'secondary-content': '#ffffff',
           accent: '#5b86e5',
           'accent-content': '#030612',
           neutral: '#fafafa',
@@ -38,9 +42,8 @@ module.exports = {
           'success-content': '#021206',
           warning: '#fcd34d',
           'warning-content': '#161002',
-          error: '#ff6978',
-          'error-content': '#160405',
-          bg: '#E0E0E0',
+          error: '#e44e21',
+          'error-content': '#fff',
         },
       },
     ],
