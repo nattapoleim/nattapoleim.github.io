@@ -30,52 +30,21 @@
     <!-- Navbar -->
     <section
       data-aos="fade-down"
-      class="fixed inset-x-0 bg-secondary-content mx-10 border px-10 mt-5 rounded-full h-16 flex items-center justify-between text-textGreen font-courier z-30"
-    >
-      <a class="font-medium text-lg" href="#">SHOP</a>
-      <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
-
-      <!-- drawer -->
-      <div class="drawer drawer-end w-fit flex items-center">
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
-          <!-- Page content here -->
-          <label
-            for="my-drawer"
-            class="cursor-pointer"
-            hx-get="/assets/shopbag.svg"
-            hx-trigger="load"
-            hx-swap="innerHTML"
-          ></label>
-        </div>
-        <div class="drawer-side">
-          <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-          <div
-            class="menu bg-[#efefef] text-base-content min-h-full w-[25rem] flex flex-col items-center gap-5 p-0"
-          >
-            <!-- Sidebar content here -->
-
-            <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
-              <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
-              <span>1</span>
-            </div>
-            <div class="text-sm text-secondary font-semibold divide-y-4 divide-secondary">
-              Congrats, you've earned FREE SHIPPING!
-            </div>
-            <div class="w-full h-2 bg-secondary" />
-          </div>
-        </div>
-      </div>
-    </section>
+      class="fixed inset-x-0 z-30"
+      hx-get="/components/navbar.html"
+      hx-trigger="load"
+      hx-swap="innerHTML"
+    ></section>
     <!-- End Navbar -->
 
+    <!-- HERO -->
     <section
       id="hero"
       class="flex flex-col-reverse md:flex-row items-center md:h-[45rem] lg:h-[40rem] 2xl:h-[60vh] overflow-hidden"
     >
       <!-- LEFT -->
       <div
-        style="background-image: url(/assets/hero/hero-l.webp)"
+        style="background-image: url(/assets/home/hero-l.webp)"
         class="md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2 flex flex-col items-start justify-center gap-5 py-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-primary-content"
       >
         <h2 class="flex flex-col items-start gap-4 font-semibold text-5xl">
@@ -106,10 +75,11 @@
 
       <!-- RIGHT -->
       <div
-        style="background-image: url(/assets/hero/hero-r.webp)"
+        style="background-image: url(/assets/home/hero-r.webp)"
         class="h-screen max-h-[52rem] md:max-h-screen md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2"
       ></div>
     </section>
+    <!-- END HERO -->
 
     <!-- INFLAMMAGING -->
     <section
@@ -144,12 +114,137 @@
     </section>
     <!-- END INFLAMMAGING -->
 
-    <!-- Footer -->
+    <!-- LINE UP -->
+    <section
+      style="background-image: url('/assets/home/lineup.webp')"
+      class="w-full min-h-[30rem] bg-cover bg-center"
+    >
+      <div class="py-14 text-secondary-content">
+        <div class="px-10">
+          <h3
+            class="text-7xl md:text-8xl lg:text-9xl uppercase font-medium overflow-hidden flex items-center gap-10"
+          >
+            <div data-aos="fade-up" data-aos-delay="200">Our</div>
+            <div data-aos="fade-up" data-aos-delay="500">Lineup</div>
+          </h3>
+          <div class="overflow-hidden">
+            <p
+              data-aos="fade-up"
+              data-aos-duration="500"
+              class="uppercase mt-6 text-lg md:text-2xl lg:text-3xl font-courier"
+            >
+              Your skin is working overtime against daily disruptions — take a breather and fortify
+              with DEINDE
+            </p>
+          </div>
+        </div>
+
+        <div class="text-primary-content font-courier mt-8">
+          <div id="cardDesktop" class="hidden md:flex px-10 items-center gap-4">
+            <!-- card desktop -->
+            <!-- <div
+              data-aos="fade-left"
+              data-aos-delay="600"
+              class="flex card relative bg-white md:w-[20rem] rounded-md group"
+            >
+              <div
+                style="background-image: url(/assets/products/serum/serum1.webp)"
+                class="absolute opacity-0 bg-center inset-0 p-5 bg-contain rounded-md group-hover:opacity-100 flex flex-col justify-between duration-300"
+              >
+                <div class="text-sm uppercase">
+                  <div class="flex items-center justify-between">
+                    <p>size</p>
+                    <p>30ml</p>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p>percent bio-based</p>
+                    <p>93</p>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <p>biotech actives</p>
+                    <p>8</p>
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary w-full font-inter">ADD TO BAG</button>
+                  <p class="mt-2">skin-strengthening</p>
+                  <div class="font-medium card-title flex items-center justify-between w-full">
+                    <h2>SERUM</h2>
+                    <p class="text-end">$ 88</p>
+                  </div>
+                </div>
+              </div>
+              <figure class="h-[15rem] overflow-hidden">
+                <img
+                  src="/assets/products/serum/serum1.webp"
+                  alt="serum"
+                  class="h-[20rem] object-cover"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="text-[#757575]">skin-strengthening</p>
+                <div class="font-medium card-title flex items-center justify-between w-full">
+                  <h2>SERUM</h2>
+                  <p class="text-end">$ 88</p>
+                </div>
+                <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <span class="ml-2">(89)</span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <!-- card mobile -->
+          <div class="md:hidden flex overflow-x-scroll">
+            <div class="ml-10 shrink-0 card relative bg-white w-[32rem] rounded-md">
+              <figure class="h-[22rem] overflow-hidden">
+                <img
+                  src="/assets/products/serum/serum1.webp"
+                  alt="serum"
+                  class="h-[33rem] object-cover"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="text-[#757575]">skin-strengthening</p>
+                <div class="font-medium card-title flex items-center justify-between w-full">
+                  <h2>SERUM</h2>
+                  <p class="text-end">$ 88</p>
+                </div>
+                <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <span class="ml-2">(89)</span>
+                </div>
+                <button class="btn btn-primary w-full mt-4">ADD TO BAG</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END LINE UP -->
+
+    <!-- FOOTER -->
     <footer class="text-primary-content font-bold text-3xl py-32 text-center">FOOTER</footer>
     <!-- END FOOTER -->
 
     <!-- SCRIPT -->
+    <script type="module" src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 1000,
+        offset: -100,
+      })
+    </script>
   </body>
 </html>

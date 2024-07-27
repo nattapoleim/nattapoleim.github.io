@@ -1,0 +1,45 @@
+<nav
+  class="bg-secondary-content mx-4 md:mx-10 px-10 mt-3 rounded-full h-16 flex items-center justify-between text-textGreen font-courier"
+>
+  <a class="font-medium text-lg" href="#">SHOP</a>
+  <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
+
+  <!-- drawer -->
+  <div class="drawer drawer-end w-fit flex items-center">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
+      <!-- Page content here -->
+      <label
+        for="my-drawer"
+        class="cursor-pointer"
+        hx-get="/assets/shopbag.svg"
+        hx-trigger="load"
+        hx-swap="innerHTML"
+      ></label>
+    </div>
+    <div class="drawer-side">
+      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay inset-0"></label>
+      <div
+        class="menu absolute top-0 right-0 bottom-0 bg-[#efefef] text-base-content min-h-full w-full md:w-[25rem] flex flex-col items-center gap-5 p-0"
+      >
+        <!-- Sidebar content here -->
+        <label
+          for="my-drawer"
+          aria-label="close sidebar"
+          class="absolute top-4 right-4 cursor-pointer"
+          hx-get="/assets/close.svg"
+          hx-trigger="load"
+          hx-swap="innerHTML"
+        ></label>
+        <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
+          <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
+          <span>1</span>
+        </div>
+        <div class="w-full text-sm text-secondary font-semibold px-2">
+          Congrats, you've earned FREE SHIPPING!
+        </div>
+        <div class="w-full h-2 bg-secondary" />
+      </div>
+    </div>
+  </div>
+</nav>

@@ -11,7 +11,7 @@
 
 @layer components {
   .btn {
-    @apply uppercase rounded-md hover:bg-primary-content hover:text-primary hover:border-primary-content;
+    @apply uppercase rounded-md hover:bg-primary-content hover:text-primary hover:border-primary-content font-inter;
   }
 
   .btn-md {
