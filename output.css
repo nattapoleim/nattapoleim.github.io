@@ -8324,6 +8324,10 @@ html:has(.drawer-open.drawer-open) {
   margin-right: 1rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -8350,10 +8354,6 @@ html:has(.drawer-open.drawer-open) {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-10 {
-  margin-left: 2.5rem;
 }
 
 .box-border {
@@ -8471,44 +8471,16 @@ html:has(.drawer-open.drawer-open) {
   height: 20rem;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
-.h-\[30rem\] {
-  height: 30rem;
-}
-
 .h-\[22rem\] {
   height: 22rem;
 }
 
-.h-\[24rem\] {
-  height: 24rem;
-}
-
-.h-full {
-  height: 100%;
-}
-
-.h-\[25rem\] {
-  height: 25rem;
-}
-
-.h-\[28rem\] {
-  height: 28rem;
-}
-
-.h-\[29rem\] {
-  height: 29rem;
-}
-
-.h-\[39rem\] {
-  height: 39rem;
-}
-
 .h-\[33rem\] {
   height: 33rem;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .max-h-\[52rem\] {
@@ -9092,10 +9064,6 @@ html:has(.drawer-open.drawer-open) {
 
 .gap-5 {
   gap: 1.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -9697,11 +9665,6 @@ html:has(.drawer-open.drawer-open) {
      object-fit: scale-down;
 }
 
-.object-center {
-  -o-object-position: center;
-     object-position: center;
-}
-
 .p-0 {
   padding: 0px;
 }
@@ -9761,10 +9724,6 @@ html:has(.drawer-open.drawer-open) {
 .py-32 {
   padding-top: 8rem;
   padding-bottom: 8rem;
-}
-
-.pl-10 {
-  padding-left: 2.5rem;
 }
 
 .text-left {

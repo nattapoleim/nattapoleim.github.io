@@ -1,52 +1,10 @@
-const products = [
-  {
-    tumbnail: 'serum',
-    name: 'serum',
-    subName: 'skin-strengthening',
-    rating: 89,
-    price: 88,
-    desc: {
-      short:
-        'Target all 5 signs of inflammaging with this vitality-boosting <strong>skin-strengthening serum.</strong> ',
-      full: 'This lightweight, milky serum is clinically proven to reduce the appearance of fine lines, improve elasticity and moisture levels, and improve the appearance of uneven skin tone. The result? 100% of clinical participants experienced healthier, more supple skin in just 4 weeks. ',
-    },
-    size: { full: '1 fl oz / 30ml', short: '30ml' },
-    badge: ['strengthen', 'protect', 'smooth', 'revitalize'],
-  },
-
-  {
-    tumbnail: 'cleanser',
-    name: 'cleanser',
-    subName: 'purifying whipped',
-    rating: 84,
-    price: 32,
-    desc: {
-      short:
-        "The <strong>purifying whipped cleanser</strong> is a mymicrobiome certified, pH-friendly formulation that gently removes impurities and dirt while maintaining your skin's barrier health.  ",
-      full: 'A lush (gel-free) microfoam ideal for all skin (even sensitive skin types), this formulation has ample cushion to wash away pollutants while maintaining the moisture barrier and leaving skin soft and smooth. ',
-    },
-    size: { full: '5.1 fl oz / 150mL', short: '150ml' },
-    badge: ['refresh', 'cleanse', 'balance', 'soften'],
-  },
-  {
-    tumbnail: 'face',
-    name: 'face stick',
-    subName: 'moisture-locking',
-    rating: 89,
-    price: 36,
-    desc: {
-      short: 'A take-anywhere-apply-anytime ally for healthy skin.    ',
-      full: 'Lightweight and nourishing, this compact face balm glides effortlessly across skin to lock in essential moisture while helping protect against damage from daily environmental stressors, like pollution. With potent ingredients like biotech-derived Naringenin and skin-identical lipids like ceramides and squalane, the face stick is clinically proven to boost moisture instantly and over time and reduce redness for smoother, more comforted skin.',
-    },
-    size: { full: '10g', short: '10g' },
-    badge: ['moisturize', 'soothe', 'comfort', 'boost'],
-  },
-]
+import { products } from './data/products/products.js'
 
 const cardDesktop = document.getElementById('cardDesktop')
+const cardMobile = document.getElementById('cardMobile')
 
 products.forEach((product, index) => {
-  cardDesktop.innerHTML += /* html */ `
+  cardDesktop.innerHTML += `
   <div
       data-aos="fade-left"
       data-aos-delay="${600 + index * 100}"
@@ -102,6 +60,37 @@ products.forEach((product, index) => {
           <img src="/assets/star.png" alt="star" />
           <span class="ml-2">(${product.rating})</span>
         </div>
+      </div>
+    </div>
+  `
+
+  cardMobile.innerHTML += `
+  <div
+    data-aos="fade-left"
+    data-aos-delay="${600 + index * 100}" 
+    class="ml-10 shrink-0 card relative bg-white w-[32rem] rounded-md">
+      <figure class="h-[22rem] overflow-hidden">
+        <img
+          src="/assets/products/${product.tumbnail}/${product.tumbnail}1.webp"
+          alt="${product.name}"
+          class="h-[33rem] object-cover"
+        />
+      </figure>
+      <div class="card-body">
+        <p class="text-[#757575]">${product.subName}</p>
+        <div class="font-medium card-title flex items-center justify-between w-full">
+          <h2 class="uppercase">${product.name}</h2>
+          <p class="text-end">$ ${product.price}</p>
+        </div>
+        <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
+          <img src="/assets/star.png" alt="star" />
+          <img src="/assets/star.png" alt="star" />
+          <img src="/assets/star.png" alt="star" />
+          <img src="/assets/star.png" alt="star" />
+          <img src="/assets/star.png" alt="star" />
+          <span class="ml-2">(${product.rating})</span>
+        </div>
+        <button class="btn btn-primary w-full mt-4">ADD TO BAG</button>
       </div>
     </div>
   `

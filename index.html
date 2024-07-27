@@ -141,91 +141,12 @@
 
         <div class="text-primary-content font-courier mt-8">
           <div id="cardDesktop" class="hidden md:flex px-10 items-center gap-4">
-            <!-- card desktop -->
-            <!-- <div
-              data-aos="fade-left"
-              data-aos-delay="600"
-              class="flex card relative bg-white md:w-[20rem] rounded-md group"
-            >
-              <div
-                style="background-image: url(/assets/products/serum/serum1.webp)"
-                class="absolute opacity-0 bg-center inset-0 p-5 bg-contain rounded-md group-hover:opacity-100 flex flex-col justify-between duration-300"
-              >
-                <div class="text-sm uppercase">
-                  <div class="flex items-center justify-between">
-                    <p>size</p>
-                    <p>30ml</p>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p>percent bio-based</p>
-                    <p>93</p>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <p>biotech actives</p>
-                    <p>8</p>
-                  </div>
-                </div>
-                <div>
-                  <button class="btn btn-primary w-full font-inter">ADD TO BAG</button>
-                  <p class="mt-2">skin-strengthening</p>
-                  <div class="font-medium card-title flex items-center justify-between w-full">
-                    <h2>SERUM</h2>
-                    <p class="text-end">$ 88</p>
-                  </div>
-                </div>
-              </div>
-              <figure class="h-[15rem] overflow-hidden">
-                <img
-                  src="/assets/products/serum/serum1.webp"
-                  alt="serum"
-                  class="h-[20rem] object-cover"
-                />
-              </figure>
-              <div class="card-body">
-                <p class="text-[#757575]">skin-strengthening</p>
-                <div class="font-medium card-title flex items-center justify-between w-full">
-                  <h2>SERUM</h2>
-                  <p class="text-end">$ 88</p>
-                </div>
-                <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <span class="ml-2">(89)</span>
-                </div>
-              </div>
-            </div> -->
+            <!-- Product cards -->
           </div>
 
           <!-- card mobile -->
-          <div class="md:hidden flex overflow-x-scroll">
-            <div class="ml-10 shrink-0 card relative bg-white w-[32rem] rounded-md">
-              <figure class="h-[22rem] overflow-hidden">
-                <img
-                  src="/assets/products/serum/serum1.webp"
-                  alt="serum"
-                  class="h-[33rem] object-cover"
-                />
-              </figure>
-              <div class="card-body">
-                <p class="text-[#757575]">skin-strengthening</p>
-                <div class="font-medium card-title flex items-center justify-between w-full">
-                  <h2>SERUM</h2>
-                  <p class="text-end">$ 88</p>
-                </div>
-                <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <img src="/assets/star.png" alt="star" />
-                  <span class="ml-2">(89)</span>
-                </div>
-                <button class="btn btn-primary w-full mt-4">ADD TO BAG</button>
-              </div>
-            </div>
+          <div id="cardMobile" class="md:hidden flex overflow-x-scroll">
+            <!-- Product cards -->
           </div>
         </div>
       </div>
@@ -237,7 +158,7 @@
     <!-- END FOOTER -->
 
     <!-- SCRIPT -->
-    <script src="script.js"></script>
+    <script type="module" src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
