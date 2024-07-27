@@ -39,3 +39,8 @@
 //   nextButton.addEventListener('click', nextSlide)
 //   prevButton.addEventListener('click', prevSlide)
 // }
+
+AOS.init({
+  once: true,
+  duration: 1000,
+})

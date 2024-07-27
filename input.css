@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    @apply font-courier font-light;
-  }
-
   html,
   body {
     @apply bg-white;
@@ -14,6 +10,17 @@
 }
 
 @layer components {
+  .btn {
+    @apply uppercase rounded-md hover:bg-primary-content hover:text-primary hover:border-primary-content;
+  }
+
+  .btn-md {
+    @apply py-3 px-5;
+  }
+
+  .btn-lg {
+    @apply py-[1.25rem] px-8;
+  }
 }
 
 * {

@@ -12,6 +12,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,7 +29,8 @@
   <body>
     <!-- Navbar -->
     <section
-      class="mx-10 border px-10 mt-5 rounded-full h-16 flex items-center justify-between text-textGreen"
+      data-aos="fade-down"
+      class="fixed inset-x-0 bg-secondary-content mx-10 border px-10 mt-5 rounded-full h-16 flex items-center justify-between text-textGreen font-courier z-30"
     >
       <a class="font-medium text-lg" href="#">SHOP</a>
       <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
@@ -63,8 +67,89 @@
         </div>
       </div>
     </section>
-
     <!-- End Navbar -->
+
+    <section
+      id="hero"
+      class="flex flex-col-reverse md:flex-row items-center md:h-[45rem] lg:h-[40rem] 2xl:h-[60vh] overflow-hidden"
+    >
+      <!-- LEFT -->
+      <div
+        style="background-image: url(/assets/hero/hero-l.webp)"
+        class="md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2 flex flex-col items-start justify-center gap-5 py-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-primary-content"
+      >
+        <h2 class="flex flex-col items-start gap-4 font-semibold text-5xl">
+          <div class="overflow-hidden">
+            <div class="" data-aos="fade-up" data-aos-delay="600">SEIZE</div>
+          </div>
+
+          <div class="overflow-hidden">
+            <div class="" data-aos="fade-up" data-aos-delay="700">THE</div>
+          </div>
+
+          <div class="overflow-hidden">
+            <div class="" data-aos="fade-up" data-aos-delay="800">DEINDE</div>
+          </div>
+        </h2>
+        <div class="overflow-hidden">
+          <p class="font-courier font-medium text-lg" data-aos="fade-up" data-aos-delay="900">
+            Reach your skin goals this summer by targeting all five signs of inflammaging with
+            DEINDE — skincare that gets to work while you play.
+          </p>
+        </div>
+        <div class="overflow-hidden">
+          <div data-aos-delay="1000" data-aos="fade-up">
+            <a href="/" class="btn btn-md lg:btn-lg btn-primary">Discover deinde</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div
+        style="background-image: url(/assets/hero/hero-r.webp)"
+        class="h-screen max-h-[52rem] md:max-h-screen md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2"
+      ></div>
+    </section>
+
+    <!-- INFLAMMAGING -->
+    <section
+      class="bg-secondary text-secondary-content py-10 px-5 md:py-16 md:px-10 flex flex-col md:flex-row md:items-center gap-10 md:gap-0"
+    >
+      <div class="w-full md:w-1/2 flex flex-col gap-5">
+        <h2 data-aos="fade-up" data-aos-delay="700" class="text-5xl sm:text-7xl">Inflammaging</h2>
+        <p
+          data-aos="fade-up"
+          data-aos-delay="800"
+          class="text-primary font-courier text-xl sm:text-3xl"
+        >
+          inflamm aging
+        </p>
+        <p data-aos="fade-up" data-aos-delay="900" class="font-courier sm:text-xl">
+          Definition: low-level, chronic inflammation caused by exposure to environmental stressors,
+          that when left alone, accelerates skin aging via the breakdown of collagen and elastin.
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col items-end justify-between gap-10 md:gap-20">
+        <div
+          data-aos="fade-up"
+          data-aos-delay="1100"
+          class="w-full md:w-3/4 font-courier md:text-xl bg-primary-content/20 p-7 rounded-md"
+        >
+          <p>DEINDE <span class="text-primary">interrupts</span> the root cause of skin aging.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="1200" class="ml-auto">
+          <a href="/" class="btn btn-md md:btn-lg btn-primary">LEARN MORE</a>
+        </div>
+      </div>
+    </section>
+    <!-- END INFLAMMAGING -->
+
+    <!-- Footer -->
+    <footer class="text-primary-content font-bold text-3xl py-32 text-center">FOOTER</footer>
+    <!-- END FOOTER -->
+
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
