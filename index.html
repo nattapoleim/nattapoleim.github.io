@@ -15,6 +15,12 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- Splide -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -114,6 +120,36 @@
     </section>
     <!-- END INFLAMMAGING -->
 
+    <!-- CAROUSEL -->
+    <section
+      class="splide bg-primary-content/50"
+      role="group"
+      aria-label="Splide Basic HTML Example"
+    >
+      <div class="splide__track">
+        <ul class="splide__list">
+          <img class="splide__slide" src="./assets/products/serum/serum2.webp" alt="serum2" />
+          <img class="splide__slide" src="./assets/products/serum/serum3.webp" alt="serum3" />
+          <img
+            class="splide__slide"
+            src="./assets/products/cleanser/cleanser2.webp"
+            alt="cleanser2"
+          />
+          <img
+            class="splide__slide"
+            src="./assets/products/cleanser/cleanser3.webp"
+            alt="cleanser3"
+          />
+          <img class="splide__slide" src="./assets/products/face/face2.webp" alt="face2" />
+          <img class="splide__slide" src="./assets/products/face/face3.webp" alt="face3" />
+          <img class="splide__slide" src="./assets/products/bundle/bundle2.webp" alt="bundle2" />
+          <img class="splide__slide" src="./assets/products/bundle/bundle3.webp" alt="bundle3" />
+          <img class="splide__slide" src="./assets/products/bundle/bundle4.webp" alt="bundle4" />
+        </ul>
+      </div>
+    </section>
+    <!-- END CAROUSEL -->
+
     <!-- LINE UP -->
     <section
       style="background-image: url('/assets/home/lineup.webp')"
@@ -122,7 +158,7 @@
       <div class="py-14 text-secondary-content">
         <div class="px-10">
           <h3
-            class="text-7xl md:text-8xl lg:text-9xl uppercase font-medium overflow-hidden flex items-center gap-10"
+            class="text-5xl md:text-8xl lg:text-9xl uppercase font-medium overflow-hidden flex items-center gap-10"
           >
             <div data-aos="fade-up" data-aos-delay="200">Our</div>
             <div data-aos="fade-up" data-aos-delay="500">Lineup</div>
@@ -131,7 +167,7 @@
             <p
               data-aos="fade-up"
               data-aos-duration="500"
-              class="uppercase mt-6 text-lg md:text-2xl lg:text-3xl font-courier"
+              class="uppercase mt-6 md:text-2xl lg:text-3xl font-courier"
             >
               Your skin is working overtime against daily disruptions — take a breather and fortify
               with DEINDE
@@ -154,12 +190,38 @@
     <!-- END LINE UP -->
 
     <!-- FOOTER -->
-    <footer class="text-primary-content font-bold text-3xl py-32 text-center">FOOTER</footer>
+    <footer class="bg-secondary text-secondary-content font-bold text-3xl py-32 text-center">
+      <div
+        class="flex items-center justify-center"
+        hx-get="./assets/footer/footer-logo.svg"
+        hx-trigger="load"
+      ></div>
+    </footer>
     <!-- END FOOTER -->
 
     <!-- SCRIPT -->
     <script type="module" src="./script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+          type: 'loop',
+          drag: 'free',
+          focus: 'center',
+          snap: true,
+          perPage: 3,
+          autoplay: true,
+          lazyLoad: 'nearby',
+          breakpoints: {
+            480: {
+              perPage: 1,
+            },
+          },
+        })
+        splide.mount()
+      })
+    </script>
     <script>
       AOS.init({
         once: true,

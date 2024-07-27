@@ -11,7 +11,7 @@ products.forEach((product, index) => {
       class="flex card relative bg-white md:w-[20rem] rounded-md group"
     >
       <div
-        style="background-image: url(/assets/products/${product.tumbnail}/${
+        style="background-image: url(./assets/products/${product.tumbnail}/${
     product.tumbnail
   }1.webp)"
         class="absolute opacity-0 bg-center inset-0 p-5 bg-contain rounded-md group-hover:opacity-100 flex flex-col justify-between duration-300"
@@ -41,8 +41,8 @@ products.forEach((product, index) => {
       </div>
       <figure class="h-[15rem] overflow-hidden">
         <img
-          src="/assets/products/${product.tumbnail}/${product.tumbnail}1.webp"
-          alt="serum"
+          src="./assets/products/${product.tumbnail}/${product.tumbnail}1.webp"
+          alt="${product.name}"
           class="h-[20rem] object-cover"
         />
       </figure>
@@ -53,25 +53,25 @@ products.forEach((product, index) => {
           <p class="text-end">$ ${product.price}8</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
           <span class="ml-2">(${product.rating})</span>
         </div>
       </div>
     </div>
   `
 
-  cardMobile.innerHTML += `
+  cardMobile.innerHTML += /* html */ `
   <div
     data-aos="fade-left"
     data-aos-delay="${600 + index * 100}" 
-    class="ml-10 shrink-0 card relative bg-white w-[32rem] rounded-md">
+    class="ml-10 shrink-0 card relative bg-white rounded-md w-[80vw]">
       <figure class="h-[22rem] overflow-hidden">
         <img
-          src="/assets/products/${product.tumbnail}/${product.tumbnail}1.webp"
+          src="./assets/products/${product.tumbnail}/${product.tumbnail}1.webp"
           alt="${product.name}"
           class="h-[33rem] object-cover"
         />
@@ -83,11 +83,11 @@ products.forEach((product, index) => {
           <p class="text-end">$ ${product.price}</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
-          <img src="/assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
+          <img src="./assets/star.png" alt="star" />
           <span class="ml-2">(${product.rating})</span>
         </div>
         <button class="btn btn-primary w-full mt-4">ADD TO BAG</button>
