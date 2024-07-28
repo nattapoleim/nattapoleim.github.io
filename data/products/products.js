@@ -1,6 +1,6 @@
 export const products = [
   {
-    tumbnail: 'serum',
+    thumbnail: 'serum',
     name: 'serum',
     subName: 'skin-strengthening',
     rating: 89,
@@ -15,7 +15,7 @@ export const products = [
   },
 
   {
-    tumbnail: 'cleanser',
+    thumbnail: 'cleanser',
     name: 'cleanser',
     subName: 'purifying whipped',
     rating: 84,
@@ -29,7 +29,7 @@ export const products = [
     badge: ['refresh', 'cleanse', 'balance', 'soften'],
   },
   {
-    tumbnail: 'face',
+    thumbnail: 'face',
     name: 'face stick',
     subName: 'moisture-locking',
     rating: 89,
@@ -44,6 +44,7 @@ export const products = [
 ]
 
 export const bundle = {
+  thumbnail: 'bundle',
   name: 'bundle',
   subName: 'skin-fortifying',
   rating: 273,
@@ -58,6 +59,5 @@ export const bundle = {
     forth:
       'The <strong>moisture-locking face stick</strong> is a take-anywhere-apply-anytime ally for healthy, nourished skin. ',
   },
-  size: '10g',
   badge: ['moisturize', 'soothe', 'comfort', 'boost'],
 }

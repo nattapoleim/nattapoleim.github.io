@@ -1,8 +1,8 @@
 {
   "name": "nattapoleim.github.io",
   "version": "1.0.0",
-  "description": "###### E-commerce Website",
-  "main": "script.js",
+  "description": "DEINDE CLONE | E-commerce Website",
+  "main": "/js/index.js",
   "scripts": {
     "build": "npx tailwindcss -i ./input.css -o ./output.css --watch"
   },
