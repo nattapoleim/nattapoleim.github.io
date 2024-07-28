@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FEBC - Midterm - Ecommerce Website</title>
+    <title>DEINDE Clone | Home</title>
 
     <!-- htmx -->
     <script
@@ -233,54 +233,15 @@
     <!-- END LINE UP -->
 
     <!-- FOOTER -->
-    <section class="font-courier bg-secondary text-secondary-content">
-      <footer class="container text-xl pt-20 space-y-10 md:space-y-20">
-        <div
-          data-aos="fade-right"
-          class="flex items-center justify-center"
-          hx-get="./assets/footer/footer-logo.svg"
-          hx-trigger="load"
-        ></div>
-        <div
-          class="flex flex-col md:flex-row items-center justify-center md:justify-start gap-8 lg:justify-between"
-        >
-          <div class="text-center md:text-start space-y-10 sm:w-2/3 md:w-[19.5rem]">
-            <p>Join us for what;s next in skin care</p>
-            <div class="flex flex-col gap-3">
-              <input
-                class="input input-lg rounded-md text-primary-content text-center placeholder:text-center placeholder:text-primary-content"
-                type="email"
-                name="email"
-                id="email"
-                placeholder="enter email here"
-              />
-              <button type="button" class="btn btn-lg btn-primary">SIGN UP</button>
-            </div>
-            <div class="flex items-center justify-between">
-              <img class="size-14" src="./assets/footer/happy.avif" alt="happy" />
-              <p class="font-inter text-xl">
-                60-DAY HAPPINESS <br />
-                GUARANTEE
-              </p>
-            </div>
-          </div>
-          <div
-            class="text-3xl mt-20 md:mt-0 w-full md:w-fit flex flex-col gap-10 items-start justify-start uppercase"
-          >
-            <a href="/">About</a>
-            <a href="/">Products</a>
-            <a href="/">Contact</a>
-          </div>
-        </div>
-        <div class="text-center pt-12 pb-10 text-xs sm:text-sm">
-          DEINDE Clone - Nattapol Eiamsa-Ard
-        </div>
-      </footer>
-    </section>
+    <section
+      hx-get="./components/footer.html"
+      hx-trigger="load"
+      class="font-courier bg-secondary text-secondary-content"
+    ></section>
     <!-- END FOOTER -->
 
     <!-- SCRIPT -->
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./js/index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script>

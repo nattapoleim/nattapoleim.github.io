@@ -21,6 +21,10 @@
   .btn-lg {
     @apply py-[1.25rem] px-8;
   }
+
+  .hover-dot {
+    @apply before:content-[''] before:size-[0.32rem] before:bg-primary-content before:absolute before:-bottom-2 before:rounded-full before:left-1/2 before:-translate-x-[0.32rem] before:hover:opacity-100 before:opacity-0 before:duration-200;
+  }
 }
 
 * {
