@@ -77,9 +77,7 @@ allProduct.forEach((product, index) => {
           ${index === 3 || index === 6 ? 'p-14' : 'p-4'}
           ${index === 2 || index === 6 ? 'text-primary-content' : 'text-secondary-content'}
           ">
-          <div class="text-7xl font-inter uppercase font-medium
-              
-          ">
+          <div class="text-7xl font-inter uppercase font-medium overflow-hidden">
             ${product.name ? `<div>${product.name}</div>` : ''}
             ${product.name2 ? `<div>${product.name2}</div>` : ''}
             ${product.name3 ? `<div>${product.name3}</div>` : ''}

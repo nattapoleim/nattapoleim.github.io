@@ -2,11 +2,6 @@
 module.exports = {
   content: ['./**/*.{html,js}'],
   theme: {
-    extend: {
-      colors: {
-        textGreen: '#255653',
-      },
-    },
     container: {
       center: true,
       padding: {
