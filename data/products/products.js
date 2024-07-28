@@ -1,6 +1,7 @@
 export const products = [
   {
     thumbnail: 'serum',
+    path: 'serum',
     name: 'serum',
     subName: 'skin-strengthening',
     rating: 89,
@@ -16,6 +17,7 @@ export const products = [
 
   {
     thumbnail: 'cleanser',
+    path: 'cleanser',
     name: 'cleanser',
     subName: 'purifying whipped',
     rating: 84,
@@ -30,6 +32,7 @@ export const products = [
   },
   {
     thumbnail: 'face',
+    path: 'face',
     name: 'face stick',
     subName: 'moisture-locking',
     rating: 89,
@@ -45,10 +48,12 @@ export const products = [
 
 export const bundle = {
   thumbnail: 'bundle',
+  path: 'bundle',
   name: 'bundle',
   subName: 'skin-fortifying',
   rating: 273,
   price: 125,
+  normalPrice: 156,
   desc: {
     short:
       'The first-of-its-kind preventative product lineup to target the five signs of inflammaging with biotech-derived, clinically-proven ingredients while remaining gentle enough for all skin types.',

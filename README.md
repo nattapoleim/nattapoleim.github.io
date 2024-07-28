@@ -11,7 +11,7 @@
   - [x] Best seller "Carousel"
   - [x] Promotion
 - [ ] Product page
-  - [ ] All products
+  - [x] All products
   - [ ] product img detail
   - [ ] Search input (name, category)
 - [ ] Cart page

@@ -28,7 +28,9 @@ allProduct.forEach((product, index) => {
             before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-accent-content/30
             "
           >
-            <a href="" class="text-sm uppercase h-full w-full z-20">
+            <a href="/pages/product/${
+              product.path
+            }.html" class="text-sm uppercase h-full w-full z-20">
               ${
                 product.size
                   ? `<div class="flex items-center justify-between z-20">
