@@ -41,7 +41,10 @@ allProduct.forEach((product, index) => {
               }
             </a>
             <div class="z-10">
-              <button class="btn btn-primary w-full font-inter z-20">ADD TO BAG</button>
+              <button
+                data-product="${product.thumbnail}"
+                data-quantity="1"
+                class="add-to-bag btn btn-primary w-full font-inter z-20">ADD TO BAG</button>
               <p class="mt-2">${product.subName}</p>
               <div class="font-medium card-title flex items-center justify-between w-full">
                 <h2 class="uppercase">${product.name}</h2>

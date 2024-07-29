@@ -1,5 +1,5 @@
 <nav
-  class="bg-secondary-content px-10 h-14 flex items-center justify-between text-textGreen font-courier bg-opacity-90"
+  class="bg-secondary-content px-10 h-14 flex items-center justify-between text-textGreen font-courier bg-opacity-90 shadow-lg"
 >
   <a class="relative font-medium text-lg hover-dot" href="/pages/shop.html">SHOP</a>
   <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
@@ -11,16 +11,18 @@
       <!-- Page content here -->
       <label
         for="my-drawer"
-        class="cursor-pointer"
+        class="cursor-pointer flex items-center justify-center gap-1"
         hx-get="/assets/shopbag.svg"
         hx-trigger="load"
-        hx-swap="innerHTML"
-      ></label>
+        hx-swap="afterbegin"
+      >
+        <span class="bag-quantity mt-1">0</span>
+      </label>
     </div>
     <div class="drawer-side">
       <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay inset-0"></label>
       <div
-        class="menu absolute top-0 right-0 bottom-0 bg-[#efefef] text-base-content min-h-full w-full md:w-[25rem] flex flex-col items-center gap-5 p-0"
+        class="menu absolute top-0 right-0 bottom-0 bg-[#efefef] text-base-content min-h-full w-full md:w-[25rem] flex flex-col items-center justify-between p-0"
       >
         <!-- Sidebar content here -->
         <label
@@ -31,15 +33,36 @@
           hx-trigger="load"
           hx-swap="innerHTML"
         ></label>
-        <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
-          <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
-          <span>1</span>
+        <div class="w-full grid gap-5">
+          <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
+            <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
+            <span class="bag-quantity">1</span>
+          </div>
+          <div class="w-full text-sm text-secondary font-semibold px-2">
+            Congrats, you've earned FREE SHIPPING!
+          </div>
+          <div class="w-full h-2 bg-secondary"></div>
         </div>
-        <div class="w-full text-sm text-secondary font-semibold px-2">
-          Congrats, you've earned FREE SHIPPING!
+
+        <!-- list -->
+        <div id="nav-list" class="flex-1 w-full overflow-y-scroll"></div>
+
+        <!-- summary -->
+        <div
+          id="nav-summary"
+          class="w-full h-[12rem] border-t border-base-300 grid gap-8 items-center p-4"
+        >
+          <div class="flex items-center justify-between text-2xl">
+            <div>
+              <p>Subtotal</p>
+              <p class="text-sm">Tax and shipping calculated at checkout</p>
+            </div>
+            <div>$ 1111</div>
+          </div>
+          <a href="" class="btn btn-primary btn-lg w-full">CHECK OUT</a>
         </div>
-        <div class="w-full h-2 bg-secondary" />
       </div>
     </div>
   </div>
 </nav>
+<script type="module" src="/js/bag.js"></script>

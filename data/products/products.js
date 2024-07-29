@@ -1,6 +1,7 @@
 export const products = [
   {
     thumbnail: 'serum',
+    imgList: 4,
     path: 'serum',
     name: 'serum',
     subName: 'skin-strengthening',
@@ -17,6 +18,7 @@ export const products = [
 
   {
     thumbnail: 'cleanser',
+    imgList: 4,
     path: 'cleanser',
     name: 'cleanser',
     subName: 'purifying whipped',
@@ -32,6 +34,7 @@ export const products = [
   },
   {
     thumbnail: 'face',
+    imgList: 5,
     path: 'face',
     name: 'face stick',
     subName: 'moisture-locking',
@@ -48,6 +51,7 @@ export const products = [
 
 export const bundle = {
   thumbnail: 'bundle',
+  imgList: 4,
   path: 'bundle',
   name: 'bundle',
   subName: 'skin-fortifying',

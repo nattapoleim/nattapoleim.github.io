@@ -18,14 +18,17 @@ products.forEach((product, index) => {
             before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-accent-content/30"
       >
 
-        <a href="" class="text-sm uppercase h-full w-full z-20">
+        <a href="/pages/product/${product.path}.html" class="text-sm uppercase h-full w-full z-20">
             <div class="flex items-center justify-between z-20">
               <p>size</p>
               <p>${product.size.short}</p>
             </div>
         </a>
         <div class="z-10">
-          <button class="btn btn-primary w-full font-inter">ADD TO BAG</button>
+          <button 
+            data-product="${product.thumbnail}"
+            data-quantity="1" 
+            class="add-to-bag btn btn-primary w-full font-inter">ADD TO BAG</button>
           <p class="mt-2">${product.subName}</p>
           <div class="font-medium card-title flex items-center justify-between w-full">
             <h2 class="uppercase">${product.name}</h2>
@@ -84,7 +87,10 @@ products.forEach((product, index) => {
           <img src="./assets/star.png" alt="star" />
           <span class="ml-2">(${product.rating})</span>
         </div>
-        <button class="btn btn-primary w-full mt-4">ADD TO BAG</button>
+        <button 
+            data-product="${product.thumbnail}"
+            data-quantity="1" 
+            class="add-to-bag btn btn-primary w-full mt-4">ADD TO BAG</button>
       </div>
     </div>
   `
