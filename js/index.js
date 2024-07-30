@@ -1,14 +1,14 @@
 import { products } from '/data/products/products.js'
 
-const cardDesktop = document.getElementById('cardDesktop')
-const cardMobile = document.getElementById('cardMobile')
+const cardDesktopElement = document.getElementById('cardDesktop')
+const cardMobileElement = document.getElementById('cardMobile')
 
 products.forEach((product, index) => {
-  cardDesktop.innerHTML += /*html*/ `
+  cardDesktopElement.innerHTML += /*html*/ `
   <div
       data-aos="fade-left"
       data-aos-delay="${600 + index * 100}"
-      class="flex card relative bg-white md:w-[20rem] rounded-md group"
+      class="flex card relative bg-white md:w-[20rem] flex-shrink-0 rounded-md group"
     >
       <div
         style="background-image: url(/assets/products/${product.thumbnail}/${
@@ -27,7 +27,7 @@ products.forEach((product, index) => {
         <div class="z-10">
           <button 
             data-product="${product.thumbnail}"
-            data-quantity="1" 
+            data-quantity="1"
             class="add-to-bag btn btn-primary w-full font-inter">ADD TO BAG</button>
           <p class="mt-2">${product.subName}</p>
           <div class="font-medium card-title flex items-center justify-between w-full">
@@ -61,7 +61,7 @@ products.forEach((product, index) => {
     </div>
   `
 
-  cardMobile.innerHTML += /* html */ `
+  cardMobileElement.innerHTML += /* html */ `
   <div
     data-aos="fade-left"
     data-aos-delay="${600 + index * 100}" 
