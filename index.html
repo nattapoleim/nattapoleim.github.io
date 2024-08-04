@@ -1,279 +1,291 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="mytheme" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEINDE Clone | Home</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>DEINDE Clone | Home</title>
 
-    <!-- htmx -->
-    <script
-      src="https://unpkg.com/htmx.org@2.0.1"
-      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
-      crossorigin="anonymous"
-    ></script>
+      <!-- htmx -->
+      <script
+         src="https://unpkg.com/htmx.org@2.0.1"
+         integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+         crossorigin="anonymous"
+      ></script>
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <!-- AOS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Splide -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
-    />
+      <!-- Splide -->
+      <link
+         rel="stylesheet"
+         href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
+         rel="stylesheet"
+      />
 
-    <!-- css styles -->
-    <link rel="stylesheet" href="output.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <section
-      data-aos="fade-down"
-      class="fixed inset-x-0 top-0 z-30"
-      hx-get="/components/navbar.html"
-      hx-trigger="load"
-      hx-swap="innerHTML"
-    ></section>
-    <!-- End Navbar -->
+      <!-- css styles -->
+      <link rel="stylesheet" href="output.css" />
+   </head>
+   <body>
+      <!-- Navbar -->
+      <section
+         data-aos="fade-down"
+         class="fixed inset-x-0 top-0 z-30"
+         hx-get="/components/navbar.html"
+         hx-trigger="load"
+         hx-swap="innerHTML"
+      ></section>
+      <!-- End Navbar -->
 
-    <!-- HERO -->
-    <section
-      id="hero"
-      class="flex flex-col-reverse md:flex-row items-center md:h-[45rem] lg:h-[40rem] 2xl:h-[62vh] overflow-hidden"
-    >
-      <!-- LEFT -->
-      <div
-        style="background-image: url(/assets/home/hero-l.webp)"
-        class="md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2 flex flex-col items-start justify-center gap-5 py-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-primary-content"
+      <!-- HERO -->
+      <section
+         id="hero"
+         class="flex flex-col-reverse md:flex-row items-center md:h-[45rem] lg:h-[40rem] 2xl:h-[62vh] overflow-hidden"
       >
-        <h2 class="flex flex-col items-start gap-4 font-semibold text-5xl">
-          <div class="overflow-hidden">
-            <div class="" data-aos="fade-up" data-aos-delay="100">SEIZE</div>
-          </div>
+         <!-- LEFT -->
+         <div
+            class="bg-hero-left md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2 flex flex-col items-start justify-center gap-5 py-12 p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-primary-content"
+         >
+            <h2 class="flex flex-col items-start gap-4 font-semibold text-5xl">
+               <div class="overflow-hidden">
+                  <div class="" data-aos="fade-up" data-aos-delay="100">SEIZE</div>
+               </div>
 
-          <div class="overflow-hidden">
-            <div class="" data-aos="fade-up" data-aos-delay="300">THE</div>
-          </div>
+               <div class="overflow-hidden">
+                  <div class="" data-aos="fade-up" data-aos-delay="300">THE</div>
+               </div>
 
-          <div class="overflow-hidden">
-            <div class="" data-aos="fade-up" data-aos-delay="500">DEINDE</div>
-          </div>
-        </h2>
-        <div class="overflow-hidden">
-          <p class="font-courier font-medium text-lg" data-aos="fade-up" data-aos-delay="700">
-            Reach your skin goals this summer by targeting all five signs of inflammaging with
-            DEINDE — skincare that gets to work while you play.
-          </p>
-        </div>
-        <div class="overflow-hidden">
-          <div data-aos-delay="900" data-aos="fade-up">
-            <a href="/pages/shop.html" class="btn btn-md lg:btn-lg btn-primary">Discover deinde</a>
-          </div>
-        </div>
-      </div>
+               <div class="overflow-hidden">
+                  <div class="" data-aos="fade-up" data-aos-delay="500">DEINDE</div>
+               </div>
+            </h2>
+            <div class="overflow-hidden">
+               <p class="font-courier font-medium text-lg" data-aos="fade-up" data-aos-delay="700">
+                  Reach your skin goals this summer by targeting all five signs of inflammaging with
+                  DEINDE — skincare that gets to work while you play.
+               </p>
+            </div>
+            <div class="overflow-hidden">
+               <div data-aos-delay="900" data-aos="fade-up">
+                  <a href="/pages/shop.html" class="btn btn-md lg:btn-lg btn-primary"
+                     >Discover deinde</a
+                  >
+               </div>
+            </div>
+         </div>
 
-      <!-- RIGHT -->
-      <div
-        style="background-image: url(/assets/home/hero-r.webp)"
-        class="h-screen max-h-[52rem] md:max-h-screen md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2"
-      ></div>
-    </section>
-    <!-- END HERO -->
+         <!-- RIGHT -->
+         <div
+            class="bg-hero-right h-screen max-h-[52rem] md:max-h-screen md:h-[100vw] lg:h-[60vw] bg-cover bg-center w-full md:w-1/2"
+         ></div>
+      </section>
+      <!-- END HERO -->
 
-    <!-- PROPMOTION -->
-    <section class="bg-secondary text-secondary-content py-4 px-4 flex flex-col md:flex-row gap-4">
-      <div class="md:w-1/2 h-[40rem] overflow-hidden rounded-md">
-        <img
-          data-aos="fade-right"
-          class="object-cover object-center h-full w-full"
-          src="./assets/products/bundle/bundle3.webp"
-          alt="bundle3-promption"
-        />
-      </div>
+      <!-- PROPMOTION -->
+      <section
+         class="bg-secondary text-secondary-content py-4 px-4 flex flex-col md:flex-row gap-4"
+      >
+         <div class="md:w-1/2 h-[40rem] overflow-hidden rounded-md">
+            <img
+               data-aos="fade-right"
+               class="object-cover object-center h-full w-full"
+               src="./assets/products/bundle/bundle3.webp"
+               alt="bundle3-promption"
+            />
+         </div>
 
-      <div class="md:w-1/2 flex flex-col items-start justify-center font-courier space-y-4 px-10">
-        <div class="overflow-hidden">
-          <h2 data-aos="fade-up" data-aos-delay="100" class="text-5xl lg:text-7xl font-inter">
-            Promotion
-          </h2>
-        </div>
-        <div class="flex w-full items-end justify-between">
-          <div class="overflow-hidden">
-            <p data-aos="fade-up" data-aos-delay="200">skin-fortifying</p>
-            <h4 data-aos="fade-up" data-aos-delay="300" class="text-4xl">BUNDLE</h4>
-          </div>
-          <div class="overflow-hidden">
-            <p data-aos="fade-up" data-aos-delay="200" class="text-xl lg:text-3xl">
-              <span>$125</span>
-              <span class="line-through text-base-300">$156</span>
-            </p>
-          </div>
-        </div>
-        <div
-          data-aos="fade-up"
-          data-aos-delay="300"
-          class="card-actions items-center justify-start gap-0 [&_img]:w-4"
-        >
-          <img src="./assets/star.png" alt="star" />
-          <img src="./assets/star.png" alt="star" />
-          <img src="./assets/star.png" alt="star" />
-          <img src="./assets/star.png" alt="star" />
-          <img src="./assets/star.png" alt="star" />
-          <span class="ml-2">(273)</span>
-        </div>
-        <div class="overflow-hidden">
-          <p data-aos="fade-up" data-aos-delay="400">
-            The first-of-its-kind preventative product lineup to target the five signs of
-            inflammaging with biotech-derived, clinically-proven ingredients while remaining gentle
-            enough for all skin types.
-          </p>
-        </div>
-        <div class="overflow-hidden hidden lg:block">
-          <p data-aos="fade-up" data-aos-delay="500">
-            The <strong class="text-primary">purifying whipped cleanser</strong> is a light and airy
-            facial cleanser that lathers into a microfoam while removing impurities from skin.
-          </p>
-        </div>
-        <div class="overflow-hidden hidden lg:block">
-          <p data-aos="fade-up" data-aos-delay="600">
-            Our lightweight, milky
-            <strong class="text-primary">skin-strengthening serum</strong> targets the signs of
-            inflammaging while boosting skin’s vitality.
-          </p>
-        </div>
-        <div class="overflow-hidden hidden lg:block">
-          <p data-aos="fade-up" data-aos-delay="700">
-            The <strong class="text-primary">moisture-locking face stick</strong> is a
-            take-anywhere-apply-anytime ally for healthy, nourished skin.
-          </p>
-        </div>
-        <div class="overflow-hidden w-full">
-          <button
-            data-product="bundle"
-            data-quantity="1"
-            data-aos="fade-up"
-            data-aos-delay="800"
-            class="add-to-bag btn btn-primary btn-lg w-full"
-          >
-            ADD TO BAG
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- END PROMOTION -->
-
-    <!-- CAROUSEL -->
-    <section
-      class="splide bg-primary-content/50"
-      role="group"
-      aria-label="Splide Basic HTML Example"
-    >
-      <div class="splide__track">
-        <ul class="splide__list">
-          <img class="splide__slide" src="./assets/products/serum/serum2.webp" alt="serum2" />
-          <img class="splide__slide" src="./assets/products/serum/serum3.webp" alt="serum3" />
-          <img
-            class="splide__slide"
-            src="./assets/products/cleanser/cleanser2.webp"
-            alt="cleanser2"
-          />
-          <img
-            class="splide__slide"
-            src="./assets/products/cleanser/cleanser3.webp"
-            alt="cleanser3"
-          />
-          <img class="splide__slide" src="./assets/products/face/face2.webp" alt="face2" />
-          <img class="splide__slide" src="./assets/products/face/face3.webp" alt="face3" />
-          <img class="splide__slide" src="./assets/products/bundle/bundle2.webp" alt="bundle2" />
-          <img class="splide__slide" src="./assets/products/bundle/bundle4.webp" alt="bundle4" />
-        </ul>
-      </div>
-    </section>
-    <!-- END CAROUSEL -->
-
-    <!-- LINE UP -->
-    <section
-      style="background-image: url('/assets/home/lineup.webp')"
-      class="w-full min-h-[30rem] bg-cover bg-center"
-    >
-      <div class="py-14 text-secondary-content">
-        <div class="px-10">
-          <h3
-            class="text-5xl md:text-8xl lg:text-9xl uppercase font-medium overflow-hidden flex items-center gap-10"
-          >
-            <div data-aos="fade-up" data-aos-delay="200">Our</div>
-            <div data-aos="fade-up" data-aos-delay="500">Lineup</div>
-          </h3>
-          <div class="overflow-hidden">
-            <p
-              data-aos="fade-up"
-              data-aos-duration="500"
-              class="uppercase mt-6 md:text-2xl lg:text-3xl font-courier"
+         <div
+            class="md:w-1/2 flex flex-col items-start justify-center font-courier space-y-4 px-10"
+         >
+            <div class="overflow-hidden">
+               <h2 data-aos="fade-up" data-aos-delay="100" class="text-5xl lg:text-7xl font-inter">
+                  Promotion
+               </h2>
+            </div>
+            <div class="flex w-full items-end justify-between">
+               <div class="overflow-hidden">
+                  <p data-aos="fade-up" data-aos-delay="200">skin-fortifying</p>
+                  <h4 data-aos="fade-up" data-aos-delay="300" class="text-4xl">BUNDLE</h4>
+               </div>
+               <div class="overflow-hidden">
+                  <p data-aos="fade-up" data-aos-delay="200" class="text-xl lg:text-3xl">
+                     <span>$125</span>
+                     <span class="line-through text-base-300">$156</span>
+                  </p>
+               </div>
+            </div>
+            <div
+               data-aos="fade-up"
+               data-aos-delay="300"
+               class="card-actions items-center justify-start gap-0 [&_img]:w-4"
             >
-              Your skin is working overtime against daily disruptions — take a breather and fortify
-              with DEINDE
-            </p>
-          </div>
-        </div>
+               <img src="./assets/star.png" alt="star" />
+               <img src="./assets/star.png" alt="star" />
+               <img src="./assets/star.png" alt="star" />
+               <img src="./assets/star.png" alt="star" />
+               <img src="./assets/star.png" alt="star" />
+               <span class="ml-2">(273)</span>
+            </div>
+            <div class="overflow-hidden">
+               <p data-aos="fade-up" data-aos-delay="400">
+                  The first-of-its-kind preventative product lineup to target the five signs of
+                  inflammaging with biotech-derived, clinically-proven ingredients while remaining
+                  gentle enough for all skin types.
+               </p>
+            </div>
+            <div class="overflow-hidden hidden lg:block">
+               <p data-aos="fade-up" data-aos-delay="500">
+                  The <strong class="text-primary">purifying whipped cleanser</strong> is a light
+                  and airy facial cleanser that lathers into a microfoam while removing impurities
+                  from skin.
+               </p>
+            </div>
+            <div class="overflow-hidden hidden lg:block">
+               <p data-aos="fade-up" data-aos-delay="600">
+                  Our lightweight, milky
+                  <strong class="text-primary">skin-strengthening serum</strong> targets the signs
+                  of inflammaging while boosting skin’s vitality.
+               </p>
+            </div>
+            <div class="overflow-hidden hidden lg:block">
+               <p data-aos="fade-up" data-aos-delay="700">
+                  The <strong class="text-primary">moisture-locking face stick</strong> is a
+                  take-anywhere-apply-anytime ally for healthy, nourished skin.
+               </p>
+            </div>
+            <div class="overflow-hidden w-full">
+               <button
+                  data-product="bundle"
+                  data-quantity="1"
+                  data-aos="fade-up"
+                  data-aos-delay="800"
+                  class="add-to-bag btn btn-primary btn-lg w-full"
+               >
+                  ADD TO BAG
+               </button>
+            </div>
+         </div>
+      </section>
+      <!-- END PROMOTION -->
 
-        <div class="text-primary-content font-courier mt-8">
-          <div id="cardDesktop" class="hidden md:flex px-10 items-center gap-4 overflow-x-scroll">
-            <!-- Product cards -->
-          </div>
+      <!-- CAROUSEL -->
+      <section class="splide bg-secondary pb-7" role="group" aria-label="Splide Basic HTML Example">
+         <div class="splide__track">
+            <ul class="splide__list">
+               <img class="splide__slide" src="./assets/products/serum/serum2.webp" alt="serum2" />
+               <img class="splide__slide" src="./assets/products/serum/serum3.webp" alt="serum3" />
+               <img
+                  class="splide__slide"
+                  src="./assets/products/cleanser/cleanser2.webp"
+                  alt="cleanser2"
+               />
+               <img
+                  class="splide__slide"
+                  src="./assets/products/cleanser/cleanser3.webp"
+                  alt="cleanser3"
+               />
+               <img class="splide__slide" src="./assets/products/face/face2.webp" alt="face2" />
+               <img class="splide__slide" src="./assets/products/face/face3.webp" alt="face3" />
+               <img
+                  class="splide__slide"
+                  src="./assets/products/bundle/bundle2.webp"
+                  alt="bundle2"
+               />
+               <img
+                  class="splide__slide"
+                  src="./assets/products/bundle/bundle4.webp"
+                  alt="bundle4"
+               />
+            </ul>
+         </div>
+      </section>
+      <!-- END CAROUSEL -->
 
-          <!-- card mobile -->
-          <div id="cardMobile" class="md:hidden flex overflow-x-scroll">
-            <!-- Product cards -->
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END LINE UP -->
+      <!-- LINE UP -->
+      <section
+         style="background-image: url('/assets/home/lineup.webp')"
+         class="w-full min-h-[30rem] bg-cover bg-center"
+      >
+         <div class="py-14 text-secondary-content">
+            <div class="px-10">
+               <h3
+                  class="text-5xl md:text-8xl lg:text-9xl uppercase font-medium overflow-hidden flex items-center gap-10"
+               >
+                  <div data-aos="fade-up" data-aos-delay="200">Our</div>
+                  <div data-aos="fade-up" data-aos-delay="500">Lineup</div>
+               </h3>
+               <div class="overflow-hidden">
+                  <p
+                     data-aos="fade-up"
+                     data-aos-duration="500"
+                     class="uppercase mt-6 md:text-2xl lg:text-3xl font-courier"
+                  >
+                     Your skin is working overtime against daily disruptions — take a breather and
+                     fortify with DEINDE
+                  </p>
+               </div>
+            </div>
 
-    <!-- FOOTER -->
-    <section
-      hx-get="./components/footer.html"
-      hx-trigger="load"
-      class="font-courier bg-secondary text-secondary-content"
-    ></section>
-    <!-- END FOOTER -->
+            <div class="text-primary-content font-courier mt-8">
+               <div
+                  id="cardDesktop"
+                  class="hidden md:flex px-10 items-center gap-4 overflow-x-scroll"
+               >
+                  <!-- Product cards -->
+               </div>
 
-    <!-- SCRIPT -->
-    <script type="module" src="./js/index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        var splide = new Splide('.splide', {
-          type: 'loop',
-          drag: 'free',
-          focus: 'center',
-          snap: true,
-          perPage: 3,
-          autoplay: true,
-          lazyLoad: 'nearby',
-          breakpoints: {
-            480: {
-              perPage: 1,
-            },
-          },
-        })
-        splide.mount()
-      })
-    </script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 1000,
-        offset: -100,
-      })
-    </script>
-  </body>
+               <!-- card mobile -->
+               <div id="cardMobile" class="md:hidden flex overflow-x-scroll">
+                  <!-- Product cards -->
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- END LINE UP -->
+
+      <!-- FOOTER -->
+      <section
+         hx-get="./components/footer.html"
+         hx-trigger="load"
+         class="font-courier bg-secondary text-secondary-content"
+      ></section>
+      <!-- END FOOTER -->
+
+      <!-- SCRIPT -->
+      <script type="module" src="./js/index.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+      <script>
+         document.addEventListener('DOMContentLoaded', function () {
+            var splide = new Splide('.splide', {
+               type: 'loop',
+               drag: 'free',
+               focus: 'center',
+               snap: true,
+               perPage: 3,
+               autoplay: true,
+               lazyLoad: 'nearby',
+               breakpoints: {
+                  480: {
+                     perPage: 1,
+                  },
+               },
+            })
+            splide.mount()
+         })
+      </script>
+      <script>
+         AOS.init({
+            once: true,
+            duration: 1000,
+            offset: -100,
+         })
+      </script>
+   </body>
 </html>
