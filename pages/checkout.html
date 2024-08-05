@@ -24,127 +24,136 @@
       />
 
       <!-- css styles -->
-      <link rel="stylesheet" href="/output.css" />
+      <link rel="stylesheet" href="/dist/output.css" />
    </head>
    <body>
       <!-- MAIN -->
       <main class="flex min-h-screen font-courier">
-         <div class="w-1/2 border-r border-base-200 p-8 pl-40 flex flex-col items-start gap-4">
-            <div hx-get="/assets/logo.svg" hx-trigger="load"></div>
-            <div class="text-center w-full">
-               <p class="text-sm font-light text-base-300 mb-4">Express Checkout</p>
-               <div class="w-full flex items-center gap-4">
-                  <button
-                     class="rounded-md h-[4rem] w-1/2 bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
-                  >
-                     <img src="/assets/payments/paypal.svg" alt="paypal" />
-                  </button>
-                  <button
-                     class="rounded-md h-[4rem] w-1/2 bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
-                  >
-                     <img
-                        class="h-[5rem] object-center object-cover"
-                        src="/assets/payments/google-pay.svg"
-                        alt="paypal"
-                     />
-                  </button>
-               </div>
-               <div class="divider">OR</div>
-            </div>
-            <form class="w-full">
-               <p class="font-medium mb-4 text-2xl">Contact</p>
-               <div>
-                  <label for="email"></label>
-                  <input
-                     class="input input-bordered rounded-md bg-inherit w-full"
-                     type="email"
-                     name="email"
-                     id="email"
-                     placeholder="Email"
-                  />
-               </div>
-               <p class="font-medium mb-4 mt-8 text-2xl">Shipping address</p>
-               <div class="flex flex-col gap-4">
-                  <div class="flex gap-4">
-                     <div class="w-1/2">
-                        <label for="firstName"></label>
-                        <input
-                           class="input input-bordered rounded-md bg-inherit w-full"
-                           type="text"
-                           name="firstName"
-                           id="firstName"
-                           required
-                           placeholder="First name"
+         <div class="w-full md:w-1/2 md:border-r md:border-base-200">
+            <div class="ml-auto lg:w-4/5 xl:w-3/4 flex flex-col items-start p-8 gap-4">
+               <div hx-get="/assets/logo.svg" hx-trigger="load"></div>
+               <div class="text-center w-full">
+                  <p class="text-sm font-light text-base-300 mb-4">Express Checkout</p>
+                  <div class="w-full flex items-center gap-4">
+                     <button
+                        class="rounded-md h-[4rem] w-1/2 bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
+                     >
+                        <img src="/assets/payments/paypal.svg" alt="paypal" />
+                     </button>
+                     <button
+                        class="rounded-md h-[4rem] w-1/2 bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
+                     >
+                        <img
+                           class="h-[5rem] object-center object-cover"
+                           src="/assets/payments/google-pay.svg"
+                           alt="paypal"
                         />
-                     </div>
-                     <div class="w-1/2">
-                        <label for="lastName"></label>
-                        <input
-                           class="input input-bordered rounded-md bg-inherit w-full"
-                           type="text"
-                           name="lastName"
-                           id="lastName"
-                           required
-                           placeholder="Last name"
-                        />
-                     </div>
-                  </div>
-                  <div>
-                     <label for="address"></label>
-                     <input
-                        class="input input-bordered rounded-md bg-inherit w-full"
-                        type="text"
-                        name="address"
-                        id="address"
-                        required
-                        placeholder="Address"
-                     />
-                  </div>
-                  <div>
-                     <label for="option"></label>
-                     <input
-                        class="input input-bordered rounded-md bg-inherit w-full"
-                        type="text"
-                        name="option"
-                        id="option"
-                        placeholder="Apartment, suite, etc. (optional)"
-                     />
-                  </div>
-                  <div>
-                     <label for="phone"></label>
-                     <input
-                        class="input input-bordered rounded-md bg-inherit w-full"
-                        type="text"
-                        name="phone"
-                        id="phone"
-                        placeholder="Phone"
-                     />
-                  </div>
-                  <div class="flex items-center justify-between">
-                     <a class="text-primary-content/60" href="/pages/shop.html">< Return to cart</a>
-                     <button class="btn btn-lg btn-primary text-sm capitalize font-courier">
-                        Continue to shipping
                      </button>
                   </div>
+                  <div class="divider">OR</div>
                </div>
-            </form>
-         </div>
-         <div id="checkout-list" class="w-1/2 bg-base-100 p-8">
-            <div class="flex items-center justify-between">
-               <div>
-                  <div
-                     class="relative size-16 flex items-center justify-center bg-base-200 rounded-md border"
-                  >
-                     <img class="h-full" src="/assets/products/serum/serum1.webp" alt="serum1" />
-                     <span
-                        class="absolute -top-3 -right-3 bg-black/50 rounded-full text-white size-6 flex items-center justify-center"
-                        >1</span
-                     >
+               <form class="w-full">
+                  <p class="font-medium mb-4 text-2xl">Contact</p>
+                  <div>
+                     <label for="email"></label>
+                     <input
+                        class="input input-bordered rounded-md bg-inherit w-full"
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                     />
                   </div>
-                  <p>serum</p>
+                  <p class="font-medium mb-4 mt-8 text-2xl">Shipping address</p>
+                  <div class="flex flex-col gap-4">
+                     <div class="flex gap-4">
+                        <div class="w-1/2">
+                           <label for="firstName"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="firstName"
+                              id="firstName"
+                              required
+                              placeholder="First name"
+                           />
+                        </div>
+                        <div class="w-1/2">
+                           <label for="lastName"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="lastName"
+                              id="lastName"
+                              required
+                              placeholder="Last name"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <label for="address"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="address"
+                           id="address"
+                           required
+                           placeholder="Address"
+                        />
+                     </div>
+                     <div>
+                        <label for="option"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="option"
+                           id="option"
+                           placeholder="Apartment, suite, etc. (optional)"
+                        />
+                     </div>
+                     <div>
+                        <label for="phone"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="phone"
+                           id="phone"
+                           placeholder="Phone"
+                        />
+                     </div>
+                     <div class="flex items-center justify-between">
+                        <a class="text-primary-content/60" href="/pages/shop.html"
+                           >< Return to cart</a
+                        >
+                        <button class="btn btn-lg btn-primary text-sm capitalize font-courier">
+                           Continue to shipping
+                        </button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+         <!-- list -->
+         <div id="checkout-list" class="w-1/2 hidden md:block bg-base-100 p-8 font-light">
+            <div class="lg:w-4/5 xl:w-3/4 grid grid-cols-1 gap-8">
+               <div id="bag-list-item" class="flex flex-col gap-3">
+                  <!-- item -->
                </div>
-               <div>
-                  <span>$36.00</span>
+               <!-- footer -->
+               <div class="grid gap-4">
+                  <div class="flex gap-2">
+                     <input
+                        type="text"
+                        class="input input-bordered rounded-md bg-white flex-1"
+                        placeholder="Discount code"
+                     />
+                     <button class="btn btn-primary" disabled>Apply</button>
+                  </div>
+                  <!-- summary -->
+                  <div class="flex items-center justify-between text-xl">
+                     <p>Total</p>
+                     <p id="total">0.00</p>
+                  </div>
                </div>
             </div>
          </div>
@@ -153,5 +162,6 @@
 
       <!-- SCRIPT -->
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script type="module" src="/js/checkout.js"></script>
    </body>
 </html>

@@ -1,63 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DEINDE Clone | Cleanser</title>
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>DEINDE Clone | Cleanser</title>
 
-    <!-- htmx -->
-    <script
-      src="https://unpkg.com/htmx.org@2.0.1"
-      integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
-      crossorigin="anonymous"
-    ></script>
+      <!-- htmx -->
+      <script
+         src="https://unpkg.com/htmx.org@2.0.1"
+         integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/"
+         crossorigin="anonymous"
+      ></script>
 
-    <!-- AOS -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <!-- AOS -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+      <!-- Google Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
+         rel="stylesheet"
+      />
 
-    <!-- css styles -->
-    <link rel="stylesheet" href="/output.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <section
-      data-aos="fade-down"
-      class="fixed inset-x-0 top-0 z-30"
-      hx-get="/components/navbar.html"
-      hx-trigger="load"
-      hx-swap="innerHTML"
-    ></section>
-    <!-- End Navbar -->
+      <!-- css styles -->
+      <link rel="stylesheet" href="/dist/output.css" />
+   </head>
+   <body>
+      <!-- Navbar -->
+      <section
+         data-aos="fade-down"
+         class="fixed inset-x-0 top-0 z-30"
+         hx-get="/components/navbar.html"
+         hx-trigger="load"
+         hx-swap="innerHTML"
+      ></section>
+      <!-- End Navbar -->
 
-    <!-- MAIN -->
-    <section id="content"></section>
-    <!-- END MAIN -->
+      <!-- MAIN -->
+      <section id="content"></section>
+      <!-- END MAIN -->
 
-    <!-- FOOTER -->
-    <section
-      hx-get="/components/footer.html"
-      hx-trigger="load"
-      class="font-courier bg-secondary text-secondary-content"
-    ></section>
-    <!-- END FOOTER -->
+      <!-- FOOTER -->
+      <section
+         hx-get="/components/footer.html"
+         hx-trigger="load"
+         class="font-courier bg-secondary text-secondary-content"
+      ></section>
+      <!-- END FOOTER -->
 
-    <!-- SCRIPT -->
-    <script type="module" src="/js/product.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        once: true,
-        duration: 1000,
-        offset: -100,
-      })
-    </script>
-  </body>
+      <!-- SCRIPT -->
+      <script type="module" src="/js/product.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+         AOS.init({
+            once: true,
+            duration: 1000,
+            offset: -100,
+         })
+      </script>
+   </body>
 </html>
