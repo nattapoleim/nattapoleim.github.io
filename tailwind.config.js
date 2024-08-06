@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
          courier: ['Courier', 'space-mono'],
          inter: ['Inter', 'serif'],
+         athiti: ['Athiti', 'space-mono'],
       },
       backgroundImage: {
          'hero-left': 'url(/assets/home/hero-l.webp)',

@@ -12,16 +12,16 @@
   - [x] Promotion
 - [ ] Product page
   - [x] All products
-  - [ ] product img detail
+  - [x] product img detail
   - [ ] Search input (name, category)
-- [ ] Cart page
-  - [ ] list of product in cart
-  - [ ] product detail and price
-  - [ ] add or delete product in cart
-- [ ] Checkout page
-  - [ ] list of product and total price
-  - [ ] form infomation for delivery
-  - [ ] payment options - credit card | paypal
+- [x] Cart page
+  - [x] list of product in cart
+  - [x] product detail and price
+  - [x] add or delete product in cart
+- [x] Checkout page
+  - [x] list of product and total price
+  - [x] form infomation for delivery
+  - [x] payment options - credit card | paypal
 
 ---
 

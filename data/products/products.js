@@ -1,72 +1,67 @@
 export const products = [
-  {
-    thumbnail: 'serum',
-    imgList: 4,
-    path: 'serum',
-    name: 'serum',
-    subName: 'skin-strengthening',
-    rating: 89,
-    price: 88,
-    desc: {
-      short:
-        'Target all 5 signs of inflammaging with this vitality-boosting <strong>skin-strengthening serum.</strong> ',
-      full: 'This lightweight, milky serum is clinically proven to reduce the appearance of fine lines, improve elasticity and moisture levels, and improve the appearance of uneven skin tone. The result? 100% of clinical participants experienced healthier, more supple skin in just 4 weeks. ',
-    },
-    size: { full: '1 fl oz / 30ml', short: '30ml' },
-    badge: ['strengthen', 'protect', 'smooth', 'revitalize'],
-  },
+   {
+      thumbnail: 'serum',
+      imgList: 4,
+      path: 'serum',
+      name: 'serum',
+      subName: 'เสริมความแกร่งให้ผิว',
+      rating: 89,
+      price: 2990,
+      desc: {
+         short: 'จัดการกับทั้ง 5 สัญญาณของการอักเสบและริ้วรอยด้วย<strong>เซรั่มเสริมความแข็งแรงให้ผิว</strong>ที่ช่วยเพิ่มความมีชีวิตชีวานี้',
+         full: 'เซรั่มเนื้อบางเบาคล้ายน้ำนม ได้รับการพิสูจน์จากทางคลินิกว่าช่วยลดเลือนริ้วรอย  เพิ่มความยืดหยุ่น ความชุ่มชื้น และปรับปรุงสีผิวที่ไม่สม่ำเสมอให้ดีขึ้น ผลลัพธ์เป็นอย่างไร? 100% ของผู้เข้าร่วมการทดสอบจากทางคลินิก มีผิวที่แข็งแรงและนุ่มนวลขึ้นในเวลาเพียง 4 สัปดาห์',
+      },
+      size: { full: '1 fl oz / 30ml', short: '30ml' },
+      badge: ['เสริมสร้าง', 'ปกป้อง', 'เรียบเนียน', 'ฟื้นฟู'],
+   },
 
-  {
-    thumbnail: 'cleanser',
-    imgList: 4,
-    path: 'cleanser',
-    name: 'cleanser',
-    subName: 'purifying whipped',
-    rating: 84,
-    price: 32,
-    desc: {
-      short:
-        "The <strong>purifying whipped cleanser</strong> is a mymicrobiome certified, pH-friendly formulation that gently removes impurities and dirt while maintaining your skin's barrier health.  ",
-      full: 'A lush (gel-free) microfoam ideal for all skin (even sensitive skin types), this formulation has ample cushion to wash away pollutants while maintaining the moisture barrier and leaving skin soft and smooth. ',
-    },
-    size: { full: '5.1 fl oz / 150mL', short: '150ml' },
-    badge: ['refresh', 'cleanse', 'balance', 'soften'],
-  },
-  {
-    thumbnail: 'face',
-    imgList: 5,
-    path: 'face',
-    name: 'face stick',
-    subName: 'moisture-locking',
-    rating: 89,
-    price: 36,
-    desc: {
-      short: 'A take-anywhere-apply-anytime ally for healthy skin.    ',
-      full: 'Lightweight and nourishing, this compact face balm glides effortlessly across skin to lock in essential moisture while helping protect against damage from daily environmental stressors, like pollution. With potent ingredients like biotech-derived Naringenin and skin-identical lipids like ceramides and squalane, the face stick is clinically proven to boost moisture instantly and over time and reduce redness for smoother, more comforted skin.',
-    },
-    size: { full: '10g', short: '10g' },
-    badge: ['moisturize', 'soothe', 'comfort', 'boost'],
-  },
+   {
+      thumbnail: 'cleanser',
+      imgList: 4,
+      path: 'cleanser',
+      name: 'cleanser',
+      subName: 'ผิวเนียนนุ่ม สะอาดล้ำลึก',
+      rating: 84,
+      price: 990,
+      desc: {
+         short: '<strong>ผลิตภัณฑ์ทำความสะอาดผิวหน้าเนื้อฟองนุ่ม</strong> ผ่านการรับรองจาก mymicrobiome เป็นสูตรที่อ่อนโยนต่อผิว รักษาสมดุลค่า pH ช่วยขจัดสิ่งสกปรกได้อย่างหมดจด พร้อมบำรุงผิวให้แข็งแรง',
+         full: 'โฟมล้างหน้าเนื้อนุ่มฟู ละเอียดอ่อนต่อผิวทุกประเภท แม้ผิวบอบบาง ผลิตภัณฑ์ทำความสะอาดผิวหน้าสูตรพิเศษ ช่วยขจัดมลภาวะได้อย่างหมดจด พร้อมคงความชุ่มชื้นให้กับผิว ทำให้ผิวรู้สึกนุ่มเรียบเนียน',
+      },
+      size: { full: '5.1 fl oz / 150mL', short: '150ml' },
+      badge: ['ผ่อนคลาย', 'ทำความสะอาด', 'ปรับสมดุล', 'นุ่มนวล'],
+   },
+   {
+      thumbnail: 'face',
+      imgList: 5,
+      path: 'face',
+      name: 'face stick',
+      subName: 'ล็อคความชุ่มชื้น',
+      rating: 89,
+      price: 1190,
+      desc: {
+         short: 'ผลิตภัณฑ์บำรุงผิวพกพาสะดวก ใช้ได้ทุกเวลา เพื่อผิวสุขภาพดี',
+         full: 'บาล์มบำรุงผิวเนื้อบางเบา ให้ความรู้สึกชุ่มชื้น ซึมซับง่าย ช่วยล็อคความชุ่มชื้นและปกป้องผิวจากมลภาวะ ด้วยส่วนผสมเข้มข้นอย่าง Naringenin ที่ได้จากเทคโนโลยีชีวภาพ และลิพิดที่คล้ายกับผิวหนัง เช่น เซราไมด์ และสqualane ผลิตภัณฑ์ได้รับการพิสูจน์ทางคลินิกแล้วว่าเพิ่มความชุ่มชื้นได้ทันทีและต่อเนื่อง ช่วยลดรอยแดง ทำให้ผิวเรียบเนียนและรู้สึกสบาย',
+      },
+      size: { full: '10g', short: '10g' },
+      badge: ['เพิ่มความชุ่มชื้น', 'ลดอาการระคายเคือง', 'สบายผิว', 'เพิ่มพลัง'],
+   },
 ]
 
 export const bundle = {
-  thumbnail: 'bundle',
-  imgList: 4,
-  path: 'bundle',
-  name: 'bundle',
-  subName: 'skin-fortifying',
-  rating: 273,
-  price: 125,
-  normalPrice: 156,
-  desc: {
-    short:
-      'The first-of-its-kind preventative product lineup to target the five signs of inflammaging with biotech-derived, clinically-proven ingredients while remaining gentle enough for all skin types.',
-    second:
-      'The <strong>purifying whipped cleanser</strong> is a light and airy facial cleanser that lathers into a microfoam while removing impurities from skin.',
-    third:
-      'Our lightweight, milky <strong>skin-strengthening serum</strong> targets the signs of inflammaging while boosting skin’s vitality.',
-    forth:
-      'The <strong>moisture-locking face stick</strong> is a take-anywhere-apply-anytime ally for healthy, nourished skin. ',
-  },
-  badge: ['moisturize', 'soothe', 'comfort', 'boost'],
+   thumbnail: 'bundle',
+   imgList: 4,
+   path: 'bundle',
+   name: 'bundle',
+   subName: 'เสริมความแกร่งให้ผิว',
+   rating: 273,
+   price: 3990,
+   normalPrice: 4990,
+   desc: {
+      short: 'ผลิตภัณฑ์ชุดป้องกันแรกที่มุ่งเน้นการจัดการกับห้าสัญญาณของการอักเสบและริ้วรอยด้วยส่วนผสมที่ได้จากเทคโนโลยีชีวภาพและผ่านการพิสูจน์ทางคลินิกในขณะที่ยังคงอ่อนโยนพอสำหรับทุกสภาพผิว',
+      second:
+         '<strong>ครีมล้างหน้าทำความสะอาดล้ำลึก</strong>คือผลิตภัณฑ์ทำความสะอาดผิวหน้าที่มีเนื้อเบาและฟูนุ่มเปลี่ยนเป็นโฟมละเอียดขณะชำระล้างสิ่งสกปรกออกจากผิว',
+      third: '<strong>เซรั่มเสริมความแข็งแรงให้ผิว</strong>ของเรามีเนื้อบางเบาคล้ายน้ำนม มุ่งเป้าจัดการกับสัญญาณของการอักเสบและริ้วรอยพร้อมกับเพิ่มความมีชีวิตชีวาให้แก่ผิว',
+      forth: '<strong>แท่งบำรุงผิวล็อคความชุ่มชื้น </strong>คือตัวช่วยที่พกพาไปได้ทุกที่และใช้ได้ทุกเวลาเพื่อผิวที่แข็งแรงและได้รับการบำรุ',
+   },
+   badge: ['เพิ่มความชุ่มชื้น', 'ลดอาการระคายเคือง', 'สบายผิว', 'เพิ่มพลัง'],
 }

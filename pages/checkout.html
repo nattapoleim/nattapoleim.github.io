@@ -19,7 +19,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
-         href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@100..900&display=swap"
+         href="https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
          rel="stylesheet"
       />
 
@@ -28,20 +28,31 @@
    </head>
    <body>
       <!-- MAIN -->
-      <main class="flex min-h-screen font-courier">
+      <main class="flex flex-col-reverse md:flex-row min-h-screen font-courier">
+         <a
+            class="md:hidden order-1 h-14 flex items-center px-6"
+            href="/index.html"
+            hx-get="/assets/logo.svg"
+            hx-trigger="load"
+         ></a>
          <div class="w-full md:w-1/2 md:border-r md:border-base-200">
             <div class="ml-auto lg:w-4/5 xl:w-3/4 flex flex-col items-start p-8 gap-4">
-               <div hx-get="/assets/logo.svg" hx-trigger="load"></div>
+               <a
+                  class="hidden md:block"
+                  href="/index.html"
+                  hx-get="/assets/logo.svg"
+                  hx-trigger="load"
+               ></a>
                <div class="text-center w-full">
-                  <p class="text-sm font-light text-base-300 mb-4">Express Checkout</p>
-                  <div class="w-full flex items-center gap-4">
+                  <p class="text-sm font-light text-base-300 mb-4">ชำระเงิน</p>
+                  <div class="w-full flex flex-wrap items-center gap-4">
                      <button
-                        class="rounded-md h-[4rem] w-1/2 bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
+                        class="rounded-md h-[4rem] w-full md:w-1/2 bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
                      >
                         <img src="/assets/payments/paypal.svg" alt="paypal" />
                      </button>
                      <button
-                        class="rounded-md h-[4rem] w-1/2 bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
+                        class="rounded-md h-[4rem] w-full md:w-1/2 bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
                      >
                         <img
                            class="h-[5rem] object-center object-cover"
@@ -50,10 +61,10 @@
                         />
                      </button>
                   </div>
-                  <div class="divider">OR</div>
+                  <div class="divider">หรือ</div>
                </div>
                <form class="w-full">
-                  <p class="font-medium mb-4 text-2xl">Contact</p>
+                  <p class="font-medium mb-4 text-2xl">อีเมล</p>
                   <div>
                      <label for="email"></label>
                      <input
@@ -61,10 +72,10 @@
                         type="email"
                         name="email"
                         id="email"
-                        placeholder="Email"
+                        placeholder="อีเมล"
                      />
                   </div>
-                  <p class="font-medium mb-4 mt-8 text-2xl">Shipping address</p>
+                  <p class="font-medium mb-4 mt-8 text-2xl">ที่อยู่จัดส่ง</p>
                   <div class="flex flex-col gap-4">
                      <div class="flex gap-4">
                         <div class="w-1/2">
@@ -75,7 +86,7 @@
                               name="firstName"
                               id="firstName"
                               required
-                              placeholder="First name"
+                              placeholder="ชื่อ"
                            />
                         </div>
                         <div class="w-1/2">
@@ -86,7 +97,7 @@
                               name="lastName"
                               id="lastName"
                               required
-                              placeholder="Last name"
+                              placeholder="นามสกุล"
                            />
                         </div>
                      </div>
@@ -98,7 +109,7 @@
                            name="address"
                            id="address"
                            required
-                           placeholder="Address"
+                           placeholder="ที่อยู่"
                         />
                      </div>
                      <div>
@@ -108,7 +119,7 @@
                            type="text"
                            name="option"
                            id="option"
-                           placeholder="Apartment, suite, etc. (optional)"
+                           placeholder="ตึก, ห้อง, อื่นๆ. (ไม่จำเป็น)"
                         />
                      </div>
                      <div>
@@ -118,36 +129,77 @@
                            type="text"
                            name="phone"
                            id="phone"
-                           placeholder="Phone"
+                           placeholder="หมายเลขโทรศัพท์มือถือ"
                         />
                      </div>
                      <div class="flex items-center justify-between">
                         <a class="text-primary-content/60" href="/pages/shop.html"
-                           >< Return to cart</a
+                           >< ย้อนกลับไปช้อปปิ้งต่อ</a
                         >
-                        <button class="btn btn-lg btn-primary text-sm capitalize font-courier">
-                           Continue to shipping
+                        <button
+                           class="btn px-14 btn-primary font-black capitalize font-athiti text-sm"
+                        >
+                           ดำเนินการต่อ
                         </button>
                      </div>
                   </div>
                </form>
             </div>
          </div>
+
+         <!-- mobile list -->
+         <div class="md:hidden collapse bg-base-200/60 rounded-none">
+            <input type="checkbox" />
+            <div class="collapse-title p-4 font-medium flex items-center justify-between">
+               <span class="text-primary-content">สรุปการสั่งซื้อ</span>
+               <span id="mobile-summary-total" class="text-lg">THB 0</span>
+            </div>
+            <div class="collapse-content">
+               <div id="mobile-checkout-list" class="w-full bg-base-100 p-4 font-light">
+                  <div class="lg:w-4/5 xl:w-3/4 grid grid-cols-1 gap-8">
+                     <div id="mobile-bag-list-item" class="flex flex-col gap-3">
+                        <!-- item -->
+                     </div>
+                     <!-- footer -->
+                     <div class="grid gap-4">
+                        <!-- coupon -->
+                        <div class="flex gap-2">
+                           <input
+                              id="mobile-coupon-input"
+                              type="text"
+                              class="input input-bordered rounded-md bg-white flex-1"
+                              placeholder="คูปองส่วนลด"
+                           />
+                           <button id="mobile-coupon-btn" class="btn btn-primary">ยืนยัน</button>
+                        </div>
+                        <!-- summary -->
+                        <div class="flex items-center justify-between text-xl">
+                           <p>Total</p>
+                           <p id="mobile-total">0.00</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
          <!-- list -->
-         <div id="checkout-list" class="w-1/2 hidden md:block bg-base-100 p-8 font-light">
+         <div id="checkout-list" class="w-full hidden md:w-1/2 md:block bg-base-100 p-8 font-light">
             <div class="lg:w-4/5 xl:w-3/4 grid grid-cols-1 gap-8">
                <div id="bag-list-item" class="flex flex-col gap-3">
                   <!-- item -->
                </div>
                <!-- footer -->
                <div class="grid gap-4">
+                  <!-- coupon -->
                   <div class="flex gap-2">
                      <input
+                        id="coupon-input"
                         type="text"
                         class="input input-bordered rounded-md bg-white flex-1"
-                        placeholder="Discount code"
+                        placeholder="คูปองส่วนลด"
                      />
-                     <button class="btn btn-primary" disabled>Apply</button>
+                     <button id="coupon-btn" class="btn btn-primary">ยืนยัน</button>
                   </div>
                   <!-- summary -->
                   <div class="flex items-center justify-between text-xl">

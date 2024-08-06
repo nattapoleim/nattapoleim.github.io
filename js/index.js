@@ -1,10 +1,11 @@
 import { products } from '/data/products/products.js'
+import formatNumber from '/js/formatNumber.js'
 
 const cardDesktopElement = document.getElementById('cardDesktop')
 const cardMobileElement = document.getElementById('cardMobile')
 
 products.forEach((product, index) => {
-  cardDesktopElement.innerHTML += /*html*/ `
+   cardDesktopElement.innerHTML += /*html*/ `
   <div
       data-aos="fade-left"
       data-aos-delay="${600 + index * 100}"
@@ -12,8 +13,8 @@ products.forEach((product, index) => {
     >
       <div
         style="background-image: url(/assets/products/${product.thumbnail}/${
-    product.thumbnail
-  }2.webp)"
+      product.thumbnail
+   }2.webp)"
         class="absolute opacity-0 text-secondary-content bg-center bg-cover inset-0 p-5 rounded-md group-hover:opacity-100 flex flex-col justify-between duration-300
             before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-accent-content/30"
       >
@@ -32,7 +33,7 @@ products.forEach((product, index) => {
           <p class="mt-2">${product.subName}</p>
           <div class="font-medium card-title flex items-center justify-between w-full">
             <h2 class="uppercase">${product.name}</h2>
-            <p class="text-end">$ ${product.price}</p>
+            <p class="text-end">${formatNumber(product.price)}</p>
           </div>
         </div>
       </div>
@@ -47,7 +48,7 @@ products.forEach((product, index) => {
         <p class="text-[#757575]">${product.subName}</p>
         <div class="font-medium card-title flex items-center justify-between w-full">
           <h2 class="uppercase">${product.name}</h2>
-          <p class="text-end">$ ${product.price}</p>
+          <p class="text-end">$ ${formatNumber(product.price)}</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
           <img src="./assets/star.png" alt="star" />
@@ -61,7 +62,7 @@ products.forEach((product, index) => {
     </div>
   `
 
-  cardMobileElement.innerHTML += /* html */ `
+   cardMobileElement.innerHTML += /* html */ `
   <div
     data-aos="fade-left"
     data-aos-delay="${600 + index * 100}" 
@@ -77,7 +78,7 @@ products.forEach((product, index) => {
         <p class="text-[#757575]">${product.subName}</p>
         <div class="font-medium card-title flex items-center justify-between w-full">
           <h2 class="uppercase">${product.name}</h2>
-          <p class="text-end">$ ${product.price}</p>
+          <p class="text-end">${formatNumber(product.price)}</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
           <img src="./assets/star.png" alt="star" />

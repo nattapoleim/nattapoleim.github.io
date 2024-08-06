@@ -1,4 +1,5 @@
 import { bundle, products } from '/data/products/products.js'
+import formatNumber from '/js/formatNumber.js'
 
 const currentProducts = [...products, bundle]
 
@@ -8,8 +9,8 @@ const pathname = window.location.pathname.split('/')
 const currentPath = pathname[pathname.length - 1].split('.')[0]
 
 currentProducts.forEach((product, index) => {
-  if (currentPath === product.path) {
-    content.innerHTML = /*html*/ `
+   if (currentPath === product.path) {
+      content.innerHTML = /*html*/ `
       <div  class="md:h-screen bg-secondary/40 w-screen flex md:flex-row flex-col">
         <!-- PRODUCT IMAGES -->
         <div class="relative h-[35rem] p-5 sm:p-10 md:p-0 md:mt-0 mt-10 w-full md:w-1/2 md:h-full">
@@ -36,11 +37,11 @@ currentProducts.forEach((product, index) => {
               </div>
               <div class="overflow-hidden">
                 <p class="text-xl lg:text-2xl">
-                  <span>$ ${product.price}</span>
+                  <span>THB ${formatNumber(product.price)}</span>
                   ${
-                    product.normalPrice
-                      ? '<span class="line-through text-base-300">$156</span>'
-                      : ''
+                     product.normalPrice
+                        ? '<span class="line-through text-black/20">4,990</span>'
+                        : ''
                   }
                   
                 </p>
@@ -62,11 +63,11 @@ currentProducts.forEach((product, index) => {
               </p>
             </div>
             <div class="overflow-hidden block md:hidden lg:block"><p>${
-              product.desc.full || product.desc.second
+               product.desc.full || product.desc.second
             }</p></div>
             ${
-              product.desc.third
-                ? /*html*/ `
+               product.desc.third
+                  ? /*html*/ `
                 <div class="overflow-hidden block md:hidden lg:block">
                   <p>${product.desc.third}</p>
                 </div>
@@ -74,17 +75,17 @@ currentProducts.forEach((product, index) => {
                   <p>${product.desc.forth}</p>
                 </div>
               `
-                : ''
+                  : ''
             }
 
             ${
-              product.size
-                ? /*html*/ `
+               product.size
+                  ? /*html*/ `
                   <div>
                     <p>Size: ${product.size.full}</p>
                   </div>
                   `
-                : ''
+                  : ''
             }
 
             <div id="badges" class="flex items-center flex-wrap gap-2"></div>
@@ -106,16 +107,16 @@ currentProducts.forEach((product, index) => {
       </div>
     `
 
-    // badge
-    product.badge.forEach(item => {
-      document.getElementById('badges').innerHTML += /*html*/ `
+      // badge
+      product.badge.forEach(item => {
+         document.getElementById('badges').innerHTML += /*html*/ `
       <div class="badge badge-primary">${item}</div>
     `
-    })
+      })
 
-    // image list
-    for (let i = 0; i < product.imgList; i++) {
-      document.getElementById('imgList').innerHTML += /*html*/ `
+      // image list
+      for (let i = 0; i < product.imgList; i++) {
+         document.getElementById('imgList').innerHTML += /*html*/ `
         <img
           class="image size-16 rounded-md cursor-pointer object-cover"
           src="/assets/products/${product.thumbnail}/${product.thumbnail}${i + 1}.webp"
@@ -124,33 +125,33 @@ currentProducts.forEach((product, index) => {
           data-product="${product.thumbnail}"
           >
       `
-    }
-  }
+      }
+   }
 })
 
 const imgList = document.getElementById('imgList')
 imgList.addEventListener('click', event => {
-  if (event.target.tagName === 'IMG') {
-    const index = event.target.dataset.index
-    const product = event.target.dataset.product
-    imageHandler(product, index)
-  }
+   if (event.target.tagName === 'IMG') {
+      const index = event.target.dataset.index
+      const product = event.target.dataset.product
+      imageHandler(product, index)
+   }
 })
 
 const imageHandler = (product, index) => {
-  document.getElementById('displayImg').src = `/assets/products/${product}/${product}${index}.webp`
+   document.getElementById('displayImg').src = `/assets/products/${product}/${product}${index}.webp`
 }
 
 const productQuantity = document.getElementById('product-quantity')
 const addButtonElement = document.getElementById('product-add-to-bag')
 
 const increament = () => {
-  productQuantity.value = parseInt(productQuantity.value) + 1
+   productQuantity.value = parseInt(productQuantity.value) + 1
 }
 const decreament = () => {
-  if (productQuantity.value != 1) {
-    productQuantity.value = parseInt(productQuantity.value) - 1
-  }
+   if (productQuantity.value != 1) {
+      productQuantity.value = parseInt(productQuantity.value) - 1
+   }
 }
 
 document.getElementById('increase').addEventListener('click', increament)
@@ -160,31 +161,31 @@ let productBagList = []
 
 // check bag in localstorage
 if (localStorage.getItem('bag')) {
-  productBagList = JSON.parse(localStorage.getItem('bag'))
+   productBagList = JSON.parse(localStorage.getItem('bag'))
 } else {
-  localStorage.setItem('bag', JSON.stringify(productBagList))
+   localStorage.setItem('bag', JSON.stringify(productBagList))
 }
 
 // add to bag
 const productAddToBagHandler = (product, quantity) => {
-  const existProductIndex = productBagList.findIndex(item => item.name === product)
+   const existProductIndex = productBagList.findIndex(item => item.name === product)
 
-  // check exist product in bag
-  if (existProductIndex !== -1) {
-    productBagList[existProductIndex].quantity += parseInt(quantity)
-  } else {
-    productBagList.push({
-      name: product,
-      quantity: parseInt(quantity),
-    })
-  }
+   // check exist product in bag
+   if (existProductIndex !== -1) {
+      productBagList[existProductIndex].quantity += parseInt(quantity)
+   } else {
+      productBagList.push({
+         name: product,
+         quantity: parseInt(quantity),
+      })
+   }
 
-  localStorage.setItem('bag', JSON.stringify(productBagList))
-  window.location.reload()
+   localStorage.setItem('bag', JSON.stringify(productBagList))
+   window.location.reload()
 }
 
 addButtonElement.addEventListener('click', event => {
-  const product = event.target.dataset.product
+   const product = event.target.dataset.product
 
-  productAddToBagHandler(product, productQuantity.value)
+   productAddToBagHandler(product, productQuantity.value)
 })

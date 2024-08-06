@@ -1,4 +1,5 @@
 import { bundle, products } from '/data/products/products.js'
+import formatNumber from '/js/formatNumber.js'
 
 const allProduct = [...products, bundle]
 
@@ -30,7 +31,7 @@ const calculateTotalBalance = () => {
 // update balance
 const updateBalance = () => {
    balance = calculateTotalBalance()
-   balanceElement.innerHTML = `$ ${balance}`
+   balanceElement.innerHTML = `THB ${formatNumber(balance)}`
 }
 
 const increament = productId => {
@@ -112,7 +113,9 @@ const renderList = () => {
                   <div class="text-sm">${product.subName}</div>
                   <div class="text-2xl">${product.name}</div>
                </div>
-               <div class="text-xl h-full text-end">$ ${product.price}</div>
+               <div class="text-xl h-full text-end"><span class="text-xs">THB</span> ${formatNumber(
+                  product.price,
+               )}</div>
             </div>
 
             <div class="flex w-full items-center gap-5">
@@ -129,7 +132,7 @@ const renderList = () => {
                   />
                   <button id="${product.thumbnail}-increase">+</button>
                </div>
-               <button id="${product.thumbnail}-remove">remove</button>
+               <button id="${product.thumbnail}-remove">ลบ</button>
             </div>
             </div>
          </div>

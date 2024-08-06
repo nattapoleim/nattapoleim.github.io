@@ -1,68 +1,68 @@
 <nav
-  class="bg-secondary-content px-10 h-14 flex items-center justify-between text-textGreen font-courier bg-opacity-90 shadow-lg"
+   class="bg-secondary-content px-10 h-14 flex items-center justify-between text-textGreen font-courier bg-opacity-90 shadow-lg"
 >
-  <a class="relative font-medium text-lg hover-dot" href="/pages/shop.html">SHOP</a>
-  <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
+   <a class="relative font-medium text-lg hover-dot" href="/pages/shop.html">SHOP</a>
+   <a href="/" hx-get="/assets/logo.svg" hx-trigger="load" hx-swap="innerHTML"></a>
 
-  <!-- drawer -->
-  <div class="drawer drawer-end w-fit flex items-center">
-    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
-      <!-- Page content here -->
-      <label
-        for="my-drawer"
-        class="cursor-pointer flex items-center justify-center gap-1"
-        hx-get="/assets/shopbag.svg"
-        hx-trigger="load"
-        hx-swap="afterbegin"
-      >
-        <span class="bag-quantity mt-1">0</span>
-      </label>
-    </div>
-    <div class="drawer-side">
-      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay inset-0"></label>
-      <div
-        class="menu absolute top-0 right-0 bottom-0 bg-[#efefef] text-base-content min-h-full w-full md:w-[30rem] flex flex-col items-center justify-between p-0"
-      >
-        <!-- Sidebar content here -->
-        <label
-          for="my-drawer"
-          aria-label="close sidebar"
-          class="absolute top-4 right-4 cursor-pointer"
-          hx-get="/assets/close.svg"
-          hx-trigger="load"
-          hx-swap="innerHTML"
-        ></label>
-        <div class="w-full grid gap-5">
-          <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
-            <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
-            <span class="bag-quantity">0</span>
-          </div>
-          <div class="w-full text-sm text-secondary font-semibold px-2">
-            Congrats, you've earned FREE SHIPPING!
-          </div>
-          <div class="w-full h-2 bg-secondary"></div>
-        </div>
-
-        <!-- list -->
-        <div id="bag-item-list" class="flex-1 w-full overflow-y-scroll"></div>
-
-        <!-- summary -->
-        <div
-          id="nav-summary"
-          class="w-full h-[12rem] border-t border-base-300 grid gap-8 items-center p-4"
-        >
-          <div class="flex items-center justify-between text-2xl">
-            <div>
-              <p>Subtotal</p>
-              <p class="text-sm">Tax and shipping calculated at checkout</p>
-            </div>
-            <div id="bag-balance">$ 0</div>
-          </div>
-          <a href="/pages/checkout.html" class="btn btn-primary btn-lg w-full">CHECK OUT</a>
-        </div>
+   <!-- drawer -->
+   <div class="drawer drawer-end w-fit flex items-center">
+      <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+      <div class="drawer-content">
+         <!-- Page content here -->
+         <label
+            for="my-drawer"
+            class="cursor-pointer flex items-center justify-center gap-1"
+            hx-get="/assets/shopbag.svg"
+            hx-trigger="load"
+            hx-swap="afterbegin"
+         >
+            <span class="bag-quantity mt-1">0</span>
+         </label>
       </div>
-    </div>
-  </div>
+      <div class="drawer-side">
+         <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay inset-0"></label>
+         <div
+            class="menu absolute top-0 right-0 bottom-0 bg-[#efefef] text-base-content min-h-full w-full md:w-[30rem] flex flex-col items-center justify-between p-0"
+         >
+            <!-- Sidebar content here -->
+            <label
+               for="my-drawer"
+               aria-label="close sidebar"
+               class="absolute top-4 right-4 cursor-pointer"
+               hx-get="/assets/close.svg"
+               hx-trigger="load"
+               hx-swap="innerHTML"
+            ></label>
+            <div class="w-full grid gap-5">
+               <div class="w-full flex items-center gap-3 text-lg text-textGreen p-4">
+                  <div hx-get="/assets/shopbag.svg" hx-trigger="load" hx-swap="innerHTML"></div>
+                  <span class="bag-quantity">0</span>
+               </div>
+               <div class="w-full text-sm text-secondary font-semibold px-2">
+                  ยินดีด้วย คุณได้รับการจัดส่งฟรี!
+               </div>
+               <div class="w-full h-2 bg-secondary"></div>
+            </div>
+
+            <!-- list -->
+            <div id="bag-item-list" class="flex-1 w-full overflow-y-scroll"></div>
+
+            <!-- summary -->
+            <div
+               id="nav-summary"
+               class="w-full h-[12rem] border-t border-base-300 grid gap-8 items-center p-4"
+            >
+               <div class="flex items-start justify-between text-2xl">
+                  <div>
+                     <p>รวม</p>
+                     <p class="text-sm">ภาษีและค่าจัดส่งจะถูกคำนวณที่หน้าชำระเงิน</p>
+                  </div>
+                  <div id="bag-balance" class="h-full">THB 0</div>
+               </div>
+               <a href="/pages/checkout.html" class="btn btn-primary btn-lg w-full">ชำระเงิน</a>
+            </div>
+         </div>
+      </div>
+   </div>
 </nav>
 <script type="module" src="/js/bag.js"></script>
