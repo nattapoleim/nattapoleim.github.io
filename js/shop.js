@@ -15,18 +15,7 @@ const allProductAndAds = [
 
 const shop = document.getElementById('shop')
 const searchInput = document.getElementById('search-input')
-const searchBtn = document.getElementById('search-btn')
 const searchForm = document.getElementById('search-form')
-
-searchBtn.disabled = true
-
-searchInput.addEventListener('change', () => {
-   if (searchInput.value !== '') {
-      searchBtn.disabled = false
-   } else {
-      searchBtn.disabled = true
-   }
-})
 
 searchForm.addEventListener('submit', e => {
    e.preventDefault()
