@@ -205,7 +205,10 @@ checkoutForm.addEventListener('submit', e => {
                   class="flex items-center justify-between p-4 bg-secondary/10 border border-secondary rounded-t-md"
                >
                   <p>บัตรเครดิต</p>
-                  <div>ma</div>
+                  <div class="flex items-center gap-2">
+                     <img alt="VISA" src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/0169695890db3db16bfe.svg" role="img" width="38" height="24" class="_1fragemwa _1fragemw5 _1fragemwj _1fragemrn _1tgdqw66">
+                     <img alt="MASTERCARD" src="https://cdn.shopify.com/shopifycloud/checkout-web/assets/ae9ceec48b1dc489596c.svg" role="img" width="38" height="24" class="_1fragemwa _1fragemw5 _1fragemwj _1fragemrn _1tgdqw66">
+                  </div>
                </div>
                <div class="bg-base-100 p-4 border border-black/20 rounded-b-md">
                   <input
