@@ -26,8 +26,6 @@ if (localStorage.getItem('bag')) {
    localStorage.setItem('bag', JSON.stringify(bagList))
 }
 
-console.log(bagList)
-
 const calculateTotalBalance = () => {
    return bagList.reduce((total, item) => {
       const product = allProduct.find(p => p.thumbnail === item.name)
@@ -134,8 +132,6 @@ const option = document.getElementById('option')
 const phone = document.getElementById('phone')
 
 let infomation = JSON.parse(localStorage.getItem('infomation')) || ''
-
-console.log(infomation)
 
 if (infomation !== '') {
    email.value = infomation.email

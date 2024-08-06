@@ -1,14 +1,14 @@
 import { bundle, products } from '/data/products/products.js'
 import formatNumber from '/js/formatNumber.js'
 
-const currentProducts = [...products, bundle]
+const allProduct = [...products, bundle]
 
 const content = document.getElementById('content')
 
 const pathname = window.location.pathname.split('/')
 const currentPath = pathname[pathname.length - 1].split('.')[0]
 
-currentProducts.forEach((product, index) => {
+allProduct.forEach((product, index) => {
    if (currentPath === product.path) {
       content.innerHTML = /*html*/ `
       <div  class="md:h-screen bg-secondary/40 w-screen flex md:flex-row flex-col">
