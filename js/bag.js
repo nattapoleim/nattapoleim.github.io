@@ -110,7 +110,7 @@ const renderList = () => {
             <div class="w-full flex flex-col items-start justify-between h-full">
             <div class="flex-1 h-full w-full flex items-center justify-between">
                <div>
-                  <div class="text-sm">${product.subName}</div>
+                  <div class="text-sm font-athiti">${product.subName}</div>
                   <div class="text-2xl">${product.name}</div>
                </div>
                <div class="text-xl h-full text-end"><span class="text-xs">THB</span> ${formatNumber(
@@ -132,7 +132,7 @@ const renderList = () => {
                   />
                   <button id="${product.thumbnail}-increase">+</button>
                </div>
-               <button id="${product.thumbnail}-remove">ลบ</button>
+               <button id="${product.thumbnail}-remove">Remove</button>
             </div>
             </div>
          </div>

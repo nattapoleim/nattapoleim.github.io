@@ -10,10 +10,10 @@
   - [x] Navbar
   - [x] Best seller "Carousel"
   - [x] Promotion
-- [ ] Product page
+- [x] Product page
   - [x] All products
   - [x] product img detail
-  - [ ] Search input (name, category)
+  - [x] Search input (name, category)
 - [x] Cart page
   - [x] list of product in cart
   - [x] product detail and price

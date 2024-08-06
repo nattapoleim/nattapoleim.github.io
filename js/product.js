@@ -32,8 +32,8 @@ currentProducts.forEach((product, index) => {
           <div class="flex flex-col w-full md:w-[90%] mx-auto items-start justify-center font-courier gap-4 px-5 sm:px-10">
             <div class="flex w-full items-end justify-between">
               <div class="overflow-hidden">
-                <p>${product.subName}</p>
-                <h4 class="text-4xl">${product.name}</h4>
+                <p class="font-athiti">${product.subName}</p>
+                <h4 class="text-4xl uppercase">${product.name}</h4>
               </div>
               <div class="overflow-hidden">
                 <p class="text-xl lg:text-2xl">
@@ -58,13 +58,13 @@ currentProducts.forEach((product, index) => {
               <span class="ml-2">(${product.rating})</span>
             </div>
             <div class="overflow-hidden">
-              <p>
+              <p class="font-athiti font-medium">
                 ${product.desc.short}
               </p>
             </div>
-            <div class="overflow-hidden block md:hidden lg:block"><p>${
-               product.desc.full || product.desc.second
-            }</p></div>
+            <div class="overflow-hidden block md:hidden lg:block">
+               <p class="font-athiti font-medium">${product.desc.full || product.desc.second}</p>
+            </div>
             ${
                product.desc.third
                   ? /*html*/ `
@@ -88,7 +88,7 @@ currentProducts.forEach((product, index) => {
                   : ''
             }
 
-            <div id="badges" class="flex items-center flex-wrap gap-2"></div>
+            <div id="badges" class="flex items-center flex-wrap gap-2 font-athiti font-medium"></div>
             
             <div class="overflow-hidden w-full flex items-center gap-4 mt-14">
               <div class="bg-base-100 py-2 px-4 rounded-md border border-accent-content w-1/4 flex items-center justify-center">

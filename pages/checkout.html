@@ -28,130 +28,19 @@
    </head>
    <body>
       <!-- MAIN -->
-      <main class="flex flex-col-reverse md:flex-row min-h-screen font-courier">
+      <main class="flex flex-col md:flex-row-reverse min-h-screen font-courier">
+         <!-- logo -->
          <a
-            class="md:hidden order-1 h-14 flex items-center px-6"
+            class="md:hidden h-14 flex items-center px-6"
             href="/index.html"
             hx-get="/assets/logo.svg"
             hx-trigger="load"
          ></a>
-         <div class="w-full md:w-1/2 md:border-r md:border-base-200">
-            <div class="ml-auto lg:w-4/5 xl:w-3/4 flex flex-col items-start p-8 gap-4">
-               <a
-                  class="hidden md:block"
-                  href="/index.html"
-                  hx-get="/assets/logo.svg"
-                  hx-trigger="load"
-               ></a>
-               <div class="text-center w-full">
-                  <p class="text-sm font-light text-base-300 mb-4">ชำระเงิน</p>
-                  <div class="w-full flex flex-wrap items-center gap-4">
-                     <button
-                        class="rounded-md h-[4rem] w-full md:w-1/2 bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
-                     >
-                        <img src="/assets/payments/paypal.svg" alt="paypal" />
-                     </button>
-                     <button
-                        class="rounded-md h-[4rem] w-full md:w-1/2 bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
-                     >
-                        <img
-                           class="h-[5rem] object-center object-cover"
-                           src="/assets/payments/google-pay.svg"
-                           alt="paypal"
-                        />
-                     </button>
-                  </div>
-                  <div class="divider">หรือ</div>
-               </div>
-               <form class="w-full">
-                  <p class="font-medium mb-4 text-2xl">อีเมล</p>
-                  <div>
-                     <label for="email"></label>
-                     <input
-                        class="input input-bordered rounded-md bg-inherit w-full"
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="อีเมล"
-                     />
-                  </div>
-                  <p class="font-medium mb-4 mt-8 text-2xl">ที่อยู่จัดส่ง</p>
-                  <div class="flex flex-col gap-4">
-                     <div class="flex gap-4">
-                        <div class="w-1/2">
-                           <label for="firstName"></label>
-                           <input
-                              class="input input-bordered rounded-md bg-inherit w-full"
-                              type="text"
-                              name="firstName"
-                              id="firstName"
-                              required
-                              placeholder="ชื่อ"
-                           />
-                        </div>
-                        <div class="w-1/2">
-                           <label for="lastName"></label>
-                           <input
-                              class="input input-bordered rounded-md bg-inherit w-full"
-                              type="text"
-                              name="lastName"
-                              id="lastName"
-                              required
-                              placeholder="นามสกุล"
-                           />
-                        </div>
-                     </div>
-                     <div>
-                        <label for="address"></label>
-                        <input
-                           class="input input-bordered rounded-md bg-inherit w-full"
-                           type="text"
-                           name="address"
-                           id="address"
-                           required
-                           placeholder="ที่อยู่"
-                        />
-                     </div>
-                     <div>
-                        <label for="option"></label>
-                        <input
-                           class="input input-bordered rounded-md bg-inherit w-full"
-                           type="text"
-                           name="option"
-                           id="option"
-                           placeholder="ตึก, ห้อง, อื่นๆ. (ไม่จำเป็น)"
-                        />
-                     </div>
-                     <div>
-                        <label for="phone"></label>
-                        <input
-                           class="input input-bordered rounded-md bg-inherit w-full"
-                           type="text"
-                           name="phone"
-                           id="phone"
-                           placeholder="หมายเลขโทรศัพท์มือถือ"
-                        />
-                     </div>
-                     <div class="flex items-center justify-between">
-                        <a class="text-primary-content/60" href="/pages/shop.html"
-                           >< ย้อนกลับไปช้อปปิ้งต่อ</a
-                        >
-                        <button
-                           class="btn px-14 btn-primary font-black capitalize font-athiti text-sm"
-                        >
-                           ดำเนินการต่อ
-                        </button>
-                     </div>
-                  </div>
-               </form>
-            </div>
-         </div>
-
          <!-- mobile list -->
          <div class="md:hidden collapse bg-base-200/60 rounded-none">
             <input type="checkbox" />
             <div class="collapse-title p-4 font-medium flex items-center justify-between">
-               <span class="text-primary-content">สรุปการสั่งซื้อ</span>
+               <span class="text-primary-content font-athiti font-medium">สรุปการสั่งซื้อ</span>
                <span id="mobile-summary-total" class="text-lg">THB 0</span>
             </div>
             <div class="collapse-content">
@@ -203,10 +92,173 @@
                   </div>
                   <!-- summary -->
                   <div class="flex items-center justify-between text-xl">
-                     <p>Total</p>
+                     <p class="font-athiti font-semibold">ยอดรวม</p>
                      <p id="total">0.00</p>
                   </div>
                </div>
+            </div>
+         </div>
+
+         <!-- form -->
+         <div id="checkout-side" class="w-full md:w-1/2 md:border-r md:border-base-200 font-athiti">
+            <div class="ml-auto lg:w-4/5 xl:w-3/4 flex flex-col items-start p-8">
+               <a
+                  class="hidden md:block mb-4"
+                  href="/index.html"
+                  hx-get="/assets/logo.svg"
+                  hx-trigger="load"
+               ></a>
+               <div class="text-center w-full">
+                  <p class="text-sm font-medium text-base-300 mb-2">ชำระเงิน</p>
+                  <div class="w-full grid md:grid-cols-2 items-center gap-4">
+                     <button
+                        class="rounded-md h-[3.5rem] w-full bg-[#ffc439] hover:bg-[#ffc439]/80 flex items-center justify-center"
+                     >
+                        <img src="/assets/payments/paypal.svg" alt="paypal" />
+                     </button>
+                     <button
+                        class="rounded-md h-[3.5rem] w-full bg-[#000] hover:bg-[#000]/80 flex items-center justify-center"
+                     >
+                        <img
+                           class="h-[5rem] object-center object-cover"
+                           src="/assets/payments/google-pay.svg"
+                           alt="paypal"
+                        />
+                     </button>
+                  </div>
+                  <div class="divider">หรือ</div>
+               </div>
+               <form id="checkout-form" class="w-full">
+                  <p class="font-medium mb-4 text-2xl">อีเมล</p>
+                  <div>
+                     <label for="email"></label>
+                     <input
+                        class="input input-bordered rounded-md bg-inherit w-full"
+                        type="email"
+                        name="email"
+                        id="email"
+                        required
+                        placeholder="อีเมล"
+                     />
+                  </div>
+                  <p class="font-medium mb-4 mt-4 text-2xl">ที่อยู่จัดส่ง</p>
+                  <div class="flex flex-col gap-4">
+                     <div class="flex gap-4">
+                        <div class="w-1/2">
+                           <label for="firstName"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="firstName"
+                              id="firstName"
+                              required
+                              placeholder="ชื่อ"
+                           />
+                        </div>
+                        <div class="w-1/2">
+                           <label for="lastName"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="lastName"
+                              id="lastName"
+                              required
+                              placeholder="นามสกุล"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <label for="address"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="address"
+                           id="address"
+                           required
+                           placeholder="ที่อยู่"
+                        />
+                     </div>
+                     <div class="grid grid-cols-2 gap-4">
+                        <div>
+                           <label for="subDistrict"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="subDistrict"
+                              id="subDistrict"
+                              required
+                              placeholder="ตำบล"
+                           />
+                        </div>
+                        <div>
+                           <label for="district"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="district"
+                              id="district"
+                              required
+                              placeholder="อำเภอ"
+                           />
+                        </div>
+                     </div>
+                     <div class="grid grid-cols-2 gap-4">
+                        <div>
+                           <label for="state"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="state"
+                              id="state"
+                              required
+                              placeholder="จังหวัด"
+                           />
+                        </div>
+                        <div>
+                           <label for="zipCode"></label>
+                           <input
+                              class="input input-bordered rounded-md bg-inherit w-full"
+                              type="text"
+                              name="zipCode"
+                              id="zipCode"
+                              required
+                              placeholder="รหัสไปรษณีย์"
+                           />
+                        </div>
+                     </div>
+                     <div>
+                        <label for="option"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="option"
+                           id="option"
+                           placeholder="ตึก, ห้อง, อื่นๆ. (ไม่จำเป็น)"
+                        />
+                     </div>
+                     <div>
+                        <label for="phone"></label>
+                        <input
+                           class="input input-bordered rounded-md bg-inherit w-full"
+                           type="text"
+                           name="phone"
+                           id="phone"
+                           placeholder="หมายเลขโทรศัพท์มือถือ"
+                        />
+                     </div>
+                     <div class="flex items-center justify-between">
+                        <a class="text-primary-content/60" href="/pages/shop.html"
+                           >< ย้อนกลับไปช้อปปิ้งต่อ</a
+                        >
+                        <button
+                           type="submit"
+                           class="btn px-14 btn-primary font-black capitalize font-athiti text-sm"
+                        >
+                           ดำเนินการต่อ
+                        </button>
+                     </div>
+                  </div>
+               </form>
             </div>
          </div>
       </main>

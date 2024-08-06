@@ -60,7 +60,24 @@
       <!-- END HEADER -->
 
       <!-- PRODUCTS -->
-      <section class="py-16 px-4 sm:px-8 md:px-16 bg-secondary/20">
+      <section class="pb-16 pt-8 px-4 sm:px-8 md:px-16 bg-secondary/20">
+         <!-- search -->
+         <form id="search-form" class="flex items-center justify-center mb-6">
+            <input
+               id="search-input"
+               type="text"
+               class="input text-secondary w-1/4 border-secondary placeholder:text-secondary/50 input-bordered bg-inherit focus:bg-white focus:border-secondary transition-all duration-100 focus:outline-secondary font-athiti font-semibold"
+               placeholder="ค้นหา..."
+            />
+            <button
+               id="search-btn"
+               type="submit"
+               hx-get="/assets/search.svg"
+               hx-trigger="load"
+               class="btn btn-circle ml-4 btn-outline border-secondary hover:bg-secondary/40"
+            ></button>
+         </form>
+         <!-- product list -->
          <main
             id="shop"
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-between gap-4 font-courier"

@@ -2,11 +2,111 @@ import { biotech, formulated, numbers } from '/data/ads.js'
 import { bundle, products } from '/data/products/products.js'
 import formatNumber from '/js/formatNumber.js'
 
-const allProduct = [products[0], products[1], biotech, numbers, products[2], bundle, formulated]
+const allProduct = [...products, bundle]
+const allProductAndAds = [
+   products[0],
+   products[1],
+   biotech,
+   numbers,
+   products[2],
+   bundle,
+   formulated,
+]
 
 const shop = document.getElementById('shop')
+const searchInput = document.getElementById('search-input')
+const searchBtn = document.getElementById('search-btn')
+const searchForm = document.getElementById('search-form')
 
-allProduct.forEach((product, index) => {
+searchBtn.disabled = true
+
+searchInput.addEventListener('change', () => {
+   if (searchInput.value !== '') {
+      searchBtn.disabled = false
+   } else {
+      searchBtn.disabled = true
+   }
+})
+
+searchForm.addEventListener('submit', e => {
+   e.preventDefault()
+   shop.innerHTML = ''
+   allProduct.forEach((product, index) => {
+      const result = product.name.includes(searchInput.value)
+      if (result) {
+         shop.innerHTML += /*html*/ `
+            <article
+               data-aos="fade-left"
+               data-aos-delay="${100 + index * 100}"
+               class=" bg-white w-full rounded-md h-[35rem] flex card relative group">
+               <div
+                  style="background-image: url(/assets/products/${product.thumbnail}/${
+            product.thumbnail
+         }2.webp)"
+                  class="absolute opacity-0 text-secondary-content bg-center bg-cover inset-0 p-5 rounded-md group-hover:opacity-100 flex flex-col justify-between duration-300
+                  before:content-[''] before:absolute before:inset-0 before:z-[1] before:bg-accent-content/30
+                  "
+               >
+                  <a href="/pages/product/${
+                     product.path
+                  }.html" class="text-sm uppercase h-full w-full z-20">
+                  ${
+                     product.size
+                        ? `<div class="flex items-center justify-between z-20">
+                        <p>size</p>
+                        <p>${product.size.short}</p>
+                        </div>`
+                        : ''
+                  }
+                  </a>
+                  <div class="z-10">
+                     <button
+                        data-product="${product.thumbnail}"
+                        data-quantity="1"
+                        class="add-to-bag btn btn-primary w-full font-inter z-20">ADD TO BAG</button>
+                     <p class="mt-2 font-athiti">${product.subName}</p>
+                     <div class="font-medium card-title flex items-center justify-between w-full">
+                        <h2 class="uppercase">${product.name}</h2>
+                        <p class="text-end">THB ${formatNumber(product.price)}</p>
+                     </div>
+                  </div>
+               </div>
+               <figure class="h-[25rem] overflow-hidden">
+                  <img
+                  src="/assets/products/${product.thumbnail}/${product.thumbnail}1.webp"
+                  alt="name"
+                  class="h-[30rem] mt-10 object-cover object-center"
+                  />
+               </figure>
+               <div class="card-body">
+                  <div>
+                  <p class="text-[#757575] font-athiti">${product.subName}</p>
+                  <div class="font-medium card-title flex items-center justify-between w-full">
+                     <h2 class="uppercase">${product.name}</h2>
+                     <p class="text-end">THB ${formatNumber(product.price)}</p>
+                  </div>
+                  </div>
+                  <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <img src="/assets/star.png" alt="star" />
+                  <span class="ml-2">(${product.rating})</span>
+                  </div>
+               </div>
+            </article>
+         `
+      }
+   })
+   if (!shop.innerHTML) {
+      shop.innerHTML = /*html*/ `
+         <div class="w-full md:col-span-2 lg:col-span-3 text-center text-2xl md:text-3xl lg:text-4xl text-primary-content font-bold font-athiti my-32">ขออภัย, ไม่พบสินค้าที่คุณต้องการ</div>
+      `
+   }
+})
+
+allProductAndAds.forEach((product, index) => {
    shop.innerHTML += /*html*/ `
     <article
           data-aos="fade-left"
@@ -46,7 +146,7 @@ allProduct.forEach((product, index) => {
                 data-product="${product.thumbnail}"
                 data-quantity="1"
                 class="add-to-bag btn btn-primary w-full font-inter z-20">ADD TO BAG</button>
-              <p class="mt-2">${product.subName}</p>
+              <p class="mt-2 font-athiti">${product.subName}</p>
               <div class="font-medium card-title flex items-center justify-between w-full">
                 <h2 class="uppercase">${product.name}</h2>
                 <p class="text-end">THB ${formatNumber(product.price)}</p>
@@ -62,7 +162,7 @@ allProduct.forEach((product, index) => {
           </figure>
           <div class="card-body">
             <div>
-              <p class="text-[#757575]">${product.subName}</p>
+              <p class="text-[#757575] font-athiti">${product.subName}</p>
               <div class="font-medium card-title flex items-center justify-between w-full">
                 <h2 class="uppercase">${product.name}</h2>
                 <p class="text-end">THB ${formatNumber(product.price)}</p>
@@ -88,10 +188,10 @@ allProduct.forEach((product, index) => {
             ${product.name2 ? `<div>${product.name2}</div>` : ''}
             ${product.name3 ? `<div>${product.name3}</div>` : ''}
           </div>
-          <div class="w-full text-end">
+          <div class="w-full font-athiti font-semibold text-end">
             ${
                product.text
-                  ? `<div class="${index === 3 ? 'text-5xl' : 'text-lg'}">${product.text}</div>`
+                  ? `<div class="${index === 3 ? 'text-5xl' : 'text-xl'}">${product.text}</div>`
                   : ''
             }
             ${product.text2 ? `<div class="text-2xl w-2/3 ml-auto">${product.text2}</div>` : ''}

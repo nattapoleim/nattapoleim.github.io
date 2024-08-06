@@ -30,10 +30,10 @@ products.forEach((product, index) => {
             data-product="${product.thumbnail}"
             data-quantity="1"
             class="add-to-bag btn btn-primary w-full font-inter">ADD TO BAG</button>
-          <p class="mt-2">${product.subName}</p>
+          <p class="mt-2 font-athiti">${product.subName}</p>
           <div class="font-medium card-title flex items-center justify-between w-full">
             <h2 class="uppercase">${product.name}</h2>
-            <p class="text-end">${formatNumber(product.price)}</p>
+            <p class="text-end">${formatNumber(product.price)}.-</p>
           </div>
         </div>
       </div>
@@ -45,10 +45,10 @@ products.forEach((product, index) => {
         />
       </figure>
       <div class="card-body">
-        <p class="text-[#757575]">${product.subName}</p>
+        <p class="text-[#757575] font-athiti">${product.subName}</p>
         <div class="font-medium card-title flex items-center justify-between w-full">
           <h2 class="uppercase">${product.name}</h2>
-          <p class="text-end">$ ${formatNumber(product.price)}</p>
+          <p class="text-end">${formatNumber(product.price)}.-</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
           <img src="./assets/star.png" alt="star" />
@@ -75,10 +75,10 @@ products.forEach((product, index) => {
         />
       </figure>
       <div class="card-body">
-        <p class="text-[#757575]">${product.subName}</p>
+        <p class="text-[#757575] font-athiti">${product.subName}</p>
         <div class="font-medium card-title flex items-center justify-between w-full">
           <h2 class="uppercase">${product.name}</h2>
-          <p class="text-end">${formatNumber(product.price)}</p>
+          <p class="text-end">${formatNumber(product.price)}.-</p>
         </div>
         <div class="card-actions items-center justify-start gap-0 [&_img]:w-4">
           <img src="./assets/star.png" alt="star" />
